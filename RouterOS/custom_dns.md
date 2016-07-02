@@ -10,7 +10,7 @@
 [admin@MikroTik] ip dns
 [admin@MikroTik] ip dns> set allow-remote-requests=yes
 ```
-![DNS 设置 主界面](https://github.com/Ruikuan/blog/raw/master/Content/dns_setting_main.png?raw=true)
+![DNS 设置 主界面](https://github.com/Ruikuan/blog/raw/master/Content/dns_setting_main.png?raw=true)  
 界面里面的动态DNS服务器，是 pppoe 拨号带过来的电信的 DNS 服务器
 
 #### 2.添加自己的域名解析列表
