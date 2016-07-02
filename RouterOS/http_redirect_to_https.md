@@ -70,6 +70,10 @@
 然后访问http://stackoverflow.com 的任意一个url，都会跳转到https://stackoverflow.com 的对应url了。
 https访问的是443端口，不会经过webproxy。
 
+#### 5. Done
+
+结合[将 RouterOS 用作 DNS 服务器](https://github.com/Ruikuan/blog/blob/master/RouterOS/custom_dns.md)使用非常方便。
+
 ##### 参考资料
 
 > [Manual:IP/Proxy - MikroTik Wiki](http://wiki.mikrotik.com/wiki/Manual:IP/Proxy#Transparent_proxy_configuration_example)  
