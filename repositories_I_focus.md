@@ -17,7 +17,7 @@
 * [CSharpEWAH](https://github.com/lemire/csharpewah) 用c#写的位图索引压缩库，很久很久没更新了
 * [Orchard](https://github.com/OrchardCMS/Orchard) 一个基于asp.net mvc 的 CMS
 * [Umbraco CMS](https://github.com/umbraco/Umbraco-CMS) 一个基于asp.net 的CMS
-* [CommonMark.NET](https://github.com/Knagis/CommonMark.NET) markdown -> html
+* [CommonMark.NET](https://github.com/Knagis/CommonMark.NET) markdown -> html (其实可以直接调用github的接口)
 * [Stackoverflow](https://github.com/StackExchange)
     * [StackExchange.Redis](https://github.com/StackExchange/StackExchange.Redis) 高性能的.net redis client
     * [Dapper](https://github.com/StackExchange/dapper-dot-net) 简单的orm，高性能
