@@ -7,4 +7,4 @@
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
 * RouterOS
-    * [MikroTik RouterOS 将http请求重定向到https](https://github.com/Ruikuan/blog/blob/master/routeros/http_redirect_to_https.md)
+    * [MikroTik RouterOS 将http请求重定向到https](https://github.com/Ruikuan/blog/blob/master/RouterOS/http_redirect_to_https.md)
