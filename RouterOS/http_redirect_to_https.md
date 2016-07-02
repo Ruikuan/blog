@@ -20,15 +20,15 @@
 ```
 [admin@MikroTik] ip proxy> set enabled=yes port=8080
 ```
-![Web Proxy Setting](https://github.com/Ruikuan/blog/raw/master/content/webproxy_setting.png?raw=true)
-![Web Proxy Error File](https://github.com/Ruikuan/blog/raw/master/content/webproxy_error_file.png?raw=true)
+![Web Proxy Setting](https://github.com/Ruikuan/blog/raw/master/Content/webproxy_setting.png?raw=true)
+![Web Proxy Error File](https://github.com/Ruikuan/blog/raw/master/Content/webproxy_error_file.png?raw=true)
 需要访问并修改路由器文件的话，开放路由器的FTP功能，使用FTP客户端访问比较方便。
 
 禁用所有到达这个webproxy的访问，目的是将访问内容替换为error.html的内容
 ```
 /ip proxy access add action=deny
 ```
-![deny all](https://github.com/Ruikuan/blog/raw/master/content/deny_all.png?raw=true)
+![deny all](https://github.com/Ruikuan/blog/raw/master/Content/deny_all.png?raw=true)
 
 
 #### 2. 设置透明代理，将路由器范围内的http访问自动重定向到代理服务器，不用浏览器显式进行代理设置
