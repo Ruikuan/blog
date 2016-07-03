@@ -23,3 +23,4 @@
     * [Dapper](https://github.com/StackExchange/dapper-dot-net) 简单的 orm，高性能
     * [Jil](https://github.com/kevin-montrose/Jil) 一个据说很快的 Json 库，使用生成 IL 的方式工作，但好像不支持 dotnet core
 * [The Accord.NET Framework](https://github.com/accord-net/framework/) 基于 .NET 的机器学习库（认知等），从 AForge.NET 扩展而来 
+* [Orleans - Distributed Virtual Actor Model](https://github.com/dotnet/orleans) 微软分布式云计算框架
