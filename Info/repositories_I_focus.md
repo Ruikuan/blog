@@ -25,3 +25,4 @@
 * [The Accord.NET Framework](https://github.com/accord-net/framework/) 基于 .NET 的机器学习库（认知等），从 AForge.NET 扩展而来 
 * [Orleans - Distributed Virtual Actor Model](https://github.com/dotnet/orleans) 微软分布式云计算框架
 * [机器学习资料](https://github.com/ty4z2008/Qix) 里面有两篇文章对于机器学习的资料收集得比较全
+* [Universal Windows app samples](https://github.com/Microsoft/Windows-universal-samples)
