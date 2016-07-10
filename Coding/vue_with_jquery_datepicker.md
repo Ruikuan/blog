@@ -14,6 +14,10 @@ Vue.directive('datepicker', {
     },
     update: function (val) {
         $(this.el).datepicker('setDate', val);
+    },
+    unbind: function () {
+        $(this.el).datepicker('destroy');
+        $(this.el).off('change');
     }
 });
 ```
