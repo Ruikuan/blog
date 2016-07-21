@@ -13,11 +13,11 @@ ffmpeg.exe -i "rtmp://live" -b:v 900k -vcodec h264_nvenc -acodec aac -b:a 256k -
 ```
 如果想要编码的视频质量更高，可以使用另外的编码参数，如下：
 ```
-ffmpeg.exe -i "rtmp://live" -b:v 900k -vcodec h264_nvenc -profile:v high -preset default -acodec aac -b:a 256k -strict -2 output.mp4
+ffmpeg.exe -i "rtmp://live" -b:v 900k -vcodec h264_nvenc -profile:v high -acodec aac -b:a 256k -strict -2 output.mp4
 ```
 也可以加大码率，或者干脆去掉 -b:v 码率，让它按照源的码率来工作。这主要是文件体积和视频质量的权衡。
 ```
-ffmpeg.exe -i "rtmp://live" -c:v h264_nvenc -profile:v high -preset default -acodec aac -b:a 256k -strict -2 output.mp4
+ffmpeg.exe -i "rtmp://live" -c:v h264_nvenc -profile:v high -acodec aac -b:a 256k -strict -2 output.mp4
 ```
 
 
