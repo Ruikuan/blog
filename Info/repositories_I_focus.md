@@ -27,3 +27,5 @@
 * [机器学习资料](https://github.com/ty4z2008/Qix) 里面有两篇文章对于机器学习的资料收集得比较全
 * [Universal Windows app samples](https://github.com/Microsoft/Windows-universal-samples)
 * [ILSpy](https://github.com/icsharpcode/ILSpy)
+* [KCP - A Fast and Reliable ARQ Protocol](https://github.com/skywind3000/kcp) KCP是一个快速可靠协议，能以比 TCP浪费10%-20%的带宽的代价，换取平均延迟降低 30%-40%，且最大延迟降低三倍的传输效果，底层用通常用 udp，参见 https://zhihu.com/question/48777542/answer/112575371
+    * [TCP端口加速器](https://github.com/xtaci/kcptun) TCP端口加速器，用于kcp-go协议测试，可以用来加速 ss
