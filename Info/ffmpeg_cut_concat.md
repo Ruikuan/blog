@@ -24,5 +24,5 @@ ffmpeg -f concat -i list.txt -c copy output.mp4
 
 
 #### 参考
-> [Using ffmpeg to cut up video](https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video)
+> [Using ffmpeg to cut up video](https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video)  
 > [Concatenate two mp4 files using ffmpeg](https://stackoverflow.com/questions/7333232/concatenate-two-mp4-files-using-ffmpeg)
