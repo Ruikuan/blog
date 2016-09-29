@@ -29,3 +29,4 @@
 * [ILSpy](https://github.com/icsharpcode/ILSpy)
 * [KCP - A Fast and Reliable ARQ Protocol](https://github.com/skywind3000/kcp) KCP是一个快速可靠协议，能以比 TCP浪费10%-20%的带宽的代价，换取平均延迟降低 30%-40%，且最大延迟降低三倍的传输效果，底层用通常用 udp，一些说明参见 [这里](https://zhihu.com/question/48777542/answer/112575371)
     * [TCP端口加速器](https://github.com/xtaci/kcptun) TCP端口加速器，用于kcp-go协议测试，可以用来加速 ss
+* [Microsoft.IO.RecyclableMemoryStream](https://github.com/Microsoft/Microsoft.IO.RecyclableMemoryStream) 一个 pooled stream，使用它可以重用 memorystream，避免频繁的 GC 甚至 Gen2 GC，极大提高系统的性能和可伸缩性。 
