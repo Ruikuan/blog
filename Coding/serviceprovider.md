@@ -55,5 +55,6 @@ Appbuilder 可以在 startup Configure 的时候获得。
 在 Program 类里面初始化完毕 webhost 之后，可以通过它获得。
 
 
+
 获得想要的 ServiceProvider 之后，我们可以把这个 provider 放到随便某个后台任务能够访问的地方，需要的时候就能 happy 地用它获得各种 service 了。
 
