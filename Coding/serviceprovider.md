@@ -14,7 +14,7 @@ public class ApiController : Controller
     }
 }
 ```
-但有时候我们并不是通过处理 http 请求的方式调用代码，比如我们需要在 asp.net core 中执行一个后台任务，那么这个后台任务是运行在后台线程或者通过一个 timer 来触发，触发的代码需要访问系统里面的各个 service，但并没有一个方便的依赖注入点，这个时候我们应该怎么获得已经注册了的 service 呢？因为依赖注入实在是方便，我们是不会愿意自己手工用 new 构造 service的。
+但有时候我们并不是通过处理 http 请求的方式调用代码，比如我们需要在 asp.net core 中执行一个后台任务，这个后台任务是运行在后台线程中或者通过一个 timer 来触发，触发的代码需要访问系统里面的各个 service，但并没有一个方便的依赖注入点，这个时候我们应该怎么获得已经注册了的 service 呢？因为依赖注入实在是方便，我们是不会愿意自己手工用 new 构造 service的。
 
 在 DotNetCore 中内置了一个 IServiceProvider 接口，asp.net core 就是使用它来获得注册服务的。IServiceProvider 接口如下：
 ```csharp
@@ -38,7 +38,9 @@ CommitService commitService = ServiceProvider.GetService<CommitService>();
 
 ### 1. 通过 IServiceCollection.BuildServiceProvider 方法获得 ServiceProvider
 
-这个扩展方法在Microsoft.Extensions.DependencyInjection 的 Assembly 中，serviceCollection 可以在 startup 组装service 的时候获得。需要注意的是，BuildServiceProvider 生成的 provider 只能获取 build 之前注册的 service， 之后再注册到 serviceCollection 中的 service 是不能获取的。
+这个扩展方法在Microsoft.Extensions.DependencyInjection 的 Assembly 中。  
+serviceCollection 可以在 startup 组装service 的时候获得。  
+需要注意的是，BuildServiceProvider 生成的 provider 只能获取 build 之前注册的 service， 之后再注册到 serviceCollection 中的 service 是不能获取的。
 
 ### 2. 通过 IAppBuilder.ApplicationServices 获得 ServiceProvider
 
