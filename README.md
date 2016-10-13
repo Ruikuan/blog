@@ -5,6 +5,7 @@
     * [Vue 和 jQuery datepicker 结合使用](https://github.com/Ruikuan/blog/blob/master/Coding/vue_with_jquery_datepicker.md)
     * [使用 Proxy Object 的灵异现象和弱智原因](https://github.com/Ruikuan/blog/blob/master/Coding/proxy_object_error.md)
     * [部署 asp.net core 应用到 windows server 2008 r2](https://github.com/Ruikuan/blog/blob/master/Coding/deploy_aspnetcore_to_win_server_2008_r2.md)
+    * [在 asp.net core 中通过非注入的方式获取 service](https://github.com/Ruikuan/blog/blob/master/Coding/serviceprovider.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
