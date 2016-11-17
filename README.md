@@ -11,6 +11,7 @@
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
     * [使用 ffmpeg 将 rtmp 流保存为 mp4 文件](https://github.com/Ruikuan/blog/blob/master/Info/ffmpeg_record.md)
     * [使用 ffmpeg 切割和合并视频文件](https://github.com/Ruikuan/blog/blob/master/Info/ffmpeg_cut_concat.md)
+    * [解决控制面板设备和打印机页面打开非常缓慢的问题](https://github.com/Ruikuan/blog/blob/master/Info/device_printers_slow.md)
 * RouterOS
     * [MikroTik RouterOS 将 http 请求重定向到 https](https://github.com/Ruikuan/blog/blob/master/RouterOS/http_redirect_to_https.md)
     * [将 RouterOS 用作 DNS 服务器](https://github.com/Ruikuan/blog/blob/master/RouterOS/custom_dns.md)
