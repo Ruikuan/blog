@@ -6,3 +6,4 @@
 * [DotNetCore.1.0.0-VS2015Tools.Preview2.exe](http://download.microsoft.com/download/A/3/8/A38489F3-9777-41DD-83F8-2CBDFAB2520C/DotNetCore.1.0.0-VS2015Tools.Preview2.exe)
 * [DotNetCore.1.0.0-VS2015Tools.Preview2.0.1.exe](https://github.com/Ruikuan/Img/raw/master/DotNetCore.1.0.0-VS2015Tools.Preview2.0.1.exe)
 * [DotNetCore.1.0.1-VS2015Tools.Preview2.0.2.exe](http://download.microsoft.com/download/5/5/7/557D02A5-C3D0-4EF6-A570-4F75CD0DA5BF/DotNetCore.1.0.1-VS2015Tools.Preview2.0.2.exe)
+* [DotNetCore.1.0.1-VS2015Tools.Preview2.0.3.exe](https://visualstudiogallery.msdn.microsoft.com/c94a02e9-f2e9-4bad-a952-a63a967e3935/file/77371/12/DotNetCore.1.0.1-VS2015Tools.Preview2.0.3.exe)
