@@ -19,8 +19,11 @@ ffmpeg.exe -i "rtmp://live" -b:v 900k -vcodec h264_nvenc -profile:v high -acodec
 ```
 ffmpeg.exe -i "rtmp://live" -c:v h264_nvenc -profile:v high -acodec aac -b:a 256k -strict -2 output.mp4
 ```
-
-
+如果不需要重新编码，只需要将流的内容记录成文件，即可以使使用如下脚本。这个脚本录出来的文件体积相当大
+```
+ffmpeg.exe -i "rtmp://live" -acodec copy -vcodec copy -f flv -y output.flv
+```
+  
 将这个写成 bat，放计划任务跑，就可以每天定时录制电视剧节目了。
 
 
