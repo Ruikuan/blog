@@ -32,3 +32,4 @@
 * [Microsoft.IO.RecyclableMemoryStream](https://github.com/Microsoft/Microsoft.IO.RecyclableMemoryStream) 一个 pooled stream，使用它可以重用 memorystream，避免频繁的 GC 甚至 Gen2 GC，极大提高系统的性能和可伸缩性。
 * [NAudio](https://github.com/naudio/NAudio) 一个音频处理的项目，近期可能用到。 
 * [FFmpegInterop library for Windows](https://github.com/Microsoft/FFmpegInterop) 在 UWP 中使用 FFmpeg
+* [ZeroFormatter](https://github.com/neuecc/ZeroFormatter) Fastest C# Serializer and Infinitely Fast Deserializer for .NET, .NET Core and Unity.
