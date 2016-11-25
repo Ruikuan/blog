@@ -87,7 +87,7 @@ passwd
 # add your custom package feeds here
 #
 # src/gz example_feed_name http://www.example.com/path/to/files
-# src/gz custom_feed http://downloads.openwrt.org/chaos_calmer/15.05/x86/generic/packages/luci
+src/gz custom_feed http://downloads.openwrt.org/chaos_calmer/15.05/x86/generic/packages/luci
 src/gz packag_feed http://downloads.openwrt.org/chaos_calmer/15.05/x86/generic/packages/packages
 src/gz basepa_feed http://downloads.openwrt.org/chaos_calmer/15.05/x86/generic/packages/base
 ```
