@@ -12,8 +12,9 @@
     * [使用 ffmpeg 将 rtmp 流保存为 mp4 文件](https://github.com/Ruikuan/blog/blob/master/Info/ffmpeg_record.md)
     * [使用 ffmpeg 切割和合并视频文件](https://github.com/Ruikuan/blog/blob/master/Info/ffmpeg_cut_concat.md)
     * [解决控制面板设备和打印机页面打开非常缓慢的问题](https://github.com/Ruikuan/blog/blob/master/Info/device_printers_slow.md)
-* RouterOS
+* Digihome
     * [MikroTik RouterOS 将 http 请求重定向到 https](https://github.com/Ruikuan/blog/blob/master/RouterOS/http_redirect_to_https.md)
     * [将 RouterOS 用作 DNS 服务器](https://github.com/Ruikuan/blog/blob/master/RouterOS/custom_dns.md)
     * [解决 RB450G 内网访问达不到千兆的问题](https://github.com/Ruikuan/blog/blob/master/RouterOS/rb450g_km.md)
     * [用 RouterOS 将访问外网某端口/地址的请求重定向到内网机器](https://github.com/Ruikuan/blog/blob/master/RouterOS/redirect_to_lan.md)
+    * [Hyper-V OpenWRT 折腾小记](https://github.com/Ruikuan/blog/blob/master/RouterOS/openwrt_begin.md)
