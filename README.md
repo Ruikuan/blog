@@ -18,3 +18,4 @@
     * [解决 RB450G 内网访问达不到千兆的问题](https://github.com/Ruikuan/blog/blob/master/RouterOS/rb450g_km.md)
     * [用 RouterOS 将访问外网某端口/地址的请求重定向到内网机器](https://github.com/Ruikuan/blog/blob/master/RouterOS/redirect_to_lan.md)
     * [Hyper-V OpenWRT 折腾小记](https://github.com/Ruikuan/blog/blob/master/RouterOS/openwrt_begin.md)
+    * [RouterOS 使用 3322 动态域名](https://github.com/Ruikuan/blog/blob/master/RouterOS/ddns.md)
