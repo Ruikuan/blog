@@ -122,4 +122,45 @@ xxxApp enable
 
 ### 配置 dns 
 
-本来设想它作为 dns 服务器，然后它上层是 RouterOS 上的 dns 服务器的，但配置几次都失败，总是解析不到 RouterOS 上面设定的 dns，先放弃。
+~~本来设想它作为 dns 服务器，然后它上层是 RouterOS 上的 dns 服务器的，但配置几次都失败，总是解析不到 RouterOS 上面设定的 dns，先放弃。~~  
+现在的方案是打算用 OpenWRT 做一个 dns 服务器，然后 RouterOS 将 server 指定为 OpenWRT。基本上是可行的。对 OpenWRT 的配置如下：
+
+/etc/config/network
+```
+config interface 'lan'
+	option type 'bridge'
+	option proto 'static'
+	option ipaddr '192.168.0.14' # OpenWRT 的 ip
+	option netmask '255.255.255.0'
+	option gateway '192.168.0.1'
+	option ifname 'eth0'
+```
+将网络配置设置成固定的 IP，避免通过 dhcp 获取到 dns 服务器。 
+
+/etc/resolv.conf
+```
+nameserver 127.0.0.1
+```
+让可以解析本机的 hosts，可以在 /etc/hosts 设置静态的域名解析。
+
+/etc/dnsmasq.conf
+```
+listen-address=127.0.0.1,192.168.0.14
+server=8.8.8.8
+server=4.4.4.4
+```
+让 dns 服务器服务本机和内网，设置外部解析 dns 服务器。
+
+```
+/etc/init.d/dnsmasq restart
+```
+重新启动服务即可。
+
+
+RouterOS 方面的配置是去掉勾选 pppoe 的 peer dns servers，在 dns 里面设置 server 为 192.168.0.14，然后 RouterOS 就到 OpenWRT 解析 dns 了， RouterOS 自己设定的 static dns entities 也能继续生效。不过还有个问题就是， OpenWRT 设定的 srv 记录，通过 RouterOS 转一道就没办法解析到了。
+
+
+
+#### 参考
+> [让OpenWRT完美适应Hyper-V ](https://soha.moe/post/make-openwrt-fits-hyperv.html)
+> [dnsmasq (简体中文)](https://wiki.archlinux.org/index.php/Dnsmasq_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
