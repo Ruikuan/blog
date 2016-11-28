@@ -108,3 +108,4 @@ masquerade 属于 src-nat 的一种，是 src-nat 的特殊转化，它的不同
 > [Manual:Packet Flow](http://wiki.mikrotik.com/wiki/Manual:Packet_Flow)  
 > [Manual:IP/Firewall/NAT](http://wiki.mikrotik.com/wiki/Manual:IP/Firewall/NAT)  
 > [Hairpin NAT](http://wiki.mikrotik.com/wiki/Hairpin_NAT)
+> [Linux NAT基本流程与实现技巧](http://blog.csdn.net/dog250/article/details/12275041) 写文章的时候并没有参考这篇文章，不过后来看了觉得内容很有帮助，加到这里方便以后查阅。
