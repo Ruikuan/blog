@@ -33,4 +33,5 @@
 * [NAudio](https://github.com/naudio/NAudio) 一个音频处理的项目，近期可能用到。 
 * [FFmpegInterop library for Windows](https://github.com/Microsoft/FFmpegInterop) 在 UWP 中使用 FFmpeg
 * [ZeroFormatter](https://github.com/neuecc/ZeroFormatter) Fastest C# Serializer and Infinitely Fast Deserializer for .NET, .NET Core and Unity.
-* [ClosedXML](https://github.com/closedxml/closedxml) ClosedXML makes it easier for developers to create Excel 2007/2010/2013 files
+* [ClosedXML](https://github.com/closedxml/closedxml) ClosedXML makes it easier for developers to create Excel 2007/2010/2013 files.
+* [.NET Standard based Windows Service support for .NET](https://github.com/dasMulli/dotnet-win32-service) Helper classes to set up and run as windows services directly on .net core.
