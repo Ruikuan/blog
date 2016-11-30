@@ -109,7 +109,21 @@ opkg install xxx --force-depends
 
 ### 配置自动启动
 
-貌似跟普通的 linux 不一样，自动启动的东西都放在 /etc/init.d/ 下面，里面的脚本拉 vsftpd 下来瞧瞧对照着写就行。写好之后，将脚本文件放到目录下，执行如下命令将它设置成可执行脚本并设置自动启动。
+貌似跟普通的 linux 不一样，自动启动的东西都放在 /etc/init.d/ 下面，里面的脚本拉 vsftpd 下来瞧瞧对照着写就行。类似如下格式：
+```
+#运行优先级
+START=50 
+
+start() {
+	service_start /usr/sbin/vsftpd
+}
+
+stop() {
+	service_stop /usr/sbin/vsftpd
+}
+
+```
+写好之后，将脚本文件放到目录下，执行如下命令将它设置成可执行脚本并设置自动启动。
 ```
 chmod +x xxxApp
 xxxApp enable
@@ -162,5 +176,5 @@ RouterOS 方面的配置是去掉勾选 pppoe 的 peer dns servers，在 dns 里
 
 
 #### 参考
-> [让OpenWRT完美适应Hyper-V ](https://soha.moe/post/make-openwrt-fits-hyperv.html)
+> [让OpenWRT完美适应Hyper-V ](https://soha.moe/post/make-openwrt-fits-hyperv.html)  
 > [dnsmasq (简体中文)](https://wiki.archlinux.org/index.php/Dnsmasq_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
