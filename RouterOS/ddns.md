@@ -31,12 +31,11 @@
 
 脚本放在 system - scripts 里面，命名为 DDNS ，这个脚背通过计划任务隔一段时间执行一次，一般还是不少于10分钟吧。计划任务在 system - scheduler 里面增加， OnEvent 里面填
 ```
-:execute DDNS
+DDNS
 ```
 即可，DDNS 是上面定义的脚本的名称。  
 
-
-脚本已经部署上去啦，等 pppoe 重连之后看会不会动态更新 ip。
+经过测试，能够顺利更新动态域名的 IP。
 
 #### 参考
 > [DDNS动态域名脚本（花生壳+3322公云）for ROS 6.x](http://www.roszj.com/526.html)  
