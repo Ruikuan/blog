@@ -36,3 +36,4 @@
 * [ClosedXML](https://github.com/closedxml/closedxml) ClosedXML makes it easier for developers to create Excel 2007/2010/2013 files.
 * [.NET Standard based Windows Service support for .NET](https://github.com/dasMulli/dotnet-win32-service) Helper classes to set up and run as windows services directly on .net core.
 * [RazorEngine](https://github.com/Antaris/RazorEngine) Open source templating engine based on Microsoft's Razor parsing engine
+* [MessagePack for CLI](https://github.com/msgpack/msgpack-cli) This is MessagePack serialization/deserialization for CLI (Common Language Infrastructure) implementations  
