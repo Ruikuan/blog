@@ -1,8 +1,10 @@
 # 一个小脚本
 
+生成批量列表  
+
 ```javascript
 // ==UserScript==
-// @name         百度云文件列表
+// @name         云盘文件列表
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  不可细说!
@@ -35,4 +37,24 @@
 })();
 ```
   
-设置为 context-menu 执行脚本，在页面左边或上边右键点击可执行。
+设置为 context-menu 执行脚本，在云盘页面左边或上边右键点击可执行。  
+
+恢复脚本  
+
+```javascript
+// ==UserScript==
+// @name         去掉复制遮罩
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  hoho!
+// @author       fdk
+// @match        http://pan.baidu.com/disk/home*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    $('.copyhere').remove();
+})();
+```
+
+同样设置成 context-menu 脚本
