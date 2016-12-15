@@ -37,3 +37,6 @@
 * [.NET Standard based Windows Service support for .NET](https://github.com/dasMulli/dotnet-win32-service) Helper classes to set up and run as windows services directly on .net core.
 * [RazorEngine](https://github.com/Antaris/RazorEngine) Open source templating engine based on Microsoft's Razor parsing engine
 * [MessagePack for CLI](https://github.com/msgpack/msgpack-cli) This is MessagePack serialization/deserialization for CLI (Common Language Infrastructure) implementations  
+* [Inferno](https://github.com/sdrapkin/SecurityDriven.Inferno) 一个基于 .NET 的加密库
+* [Ulterius](https://github.com/Ulterius/server) 基于 .NET 的远程管理解决方案，管理服务器的文件、监控硬件资源等。貌似不是太高端，但它能传界面到浏览器。
+
