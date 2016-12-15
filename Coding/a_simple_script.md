@@ -13,13 +13,12 @@
 // @grant        none
 // ==/UserScript==
 
-(function()
-{
+(function() {
     //{access_token} 替换成自己的 token
     let prefix = 'https://www.baidupcs.com/rest/2.0/pcs/stream?method=download&access_token={access_token}&path=';
     let batchText = '';
     let parentPath =  $('li[node-type="historylistmanager-history-list"]').children().last().attr('title').replace('全部文件','');
-    $('.filename').each(function(){
+    $('.filename').each(function() {
         let t = $(this);
         let c = t.parent().parent().prev().attr('class');
         if(c.indexOf('dir') < 0)
