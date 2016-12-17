@@ -22,7 +22,7 @@
         let t = $(this);
         let c = t.parent().parent().prev().attr('class');
         if(c.indexOf('dir') < 0) {
-            let fullPath = prefix + escape(parentPath) + '/' + encodeURIComponent(t.attr('title'));
+            let fullPath = prefix + encodeURIComponent(parentPath + '/' + t.attr('title'));
             batchText = batchText + fullPath  + '\n';
         }
     });
