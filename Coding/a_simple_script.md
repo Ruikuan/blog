@@ -22,8 +22,8 @@
         let t = $(this);
         let c = t.parent().parent().prev().attr('class');
         if(c.indexOf('dir') < 0) {
-            let fullPath = prefix + parentPath + '/' + t.attr('title');
-            batchText = batchText + encodeURI( fullPath ) + '\n';
+            let fullPath = prefix + escape(parentPath) + '/' + encodeURIComponent(t.attr('title'));
+            batchText = batchText + fullPath  + '\n';
         }
     });
     let textarea = document.createElement('textarea');
