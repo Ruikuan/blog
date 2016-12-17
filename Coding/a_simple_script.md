@@ -6,7 +6,7 @@
 // ==UserScript==
 // @name         云盘文件列表
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.3
 // @description  不可细说!
 // @author       fdk
 // @match        http://pan.baidu.com/disk/home*
