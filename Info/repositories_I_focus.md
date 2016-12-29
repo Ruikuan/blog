@@ -42,4 +42,5 @@
 * [Inferno](https://github.com/sdrapkin/SecurityDriven.Inferno) 一个基于 .NET 的加密库
 * [Ulterius](https://github.com/Ulterius/server) 基于 .NET 的远程管理解决方案，管理服务器的文件、监控硬件资源等。貌似不是太高端，但它能传界面到浏览器。
 * [Wyam](https://github.com/Wyamio/Wyam) Wyam is a simple to use, highly modular, and extremely configurable static content generator that can be used to generate web sites, produce documentation, create ebooks, and much more. 
+* [Jint](https://github.com/sebastienros/jint) Jint is a Javascript interpreter for .NET which provides full ECMA 5.1 compliance and can run on any .NET platform. Because it doesn't generate any .NET bytecode nor use the DLR it runs relatively small scripts faster.
 
