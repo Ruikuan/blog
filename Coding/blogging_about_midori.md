@@ -19,7 +19,7 @@
     6. [性能文化](https://github.com/Ruikuan/blog/blob/master/Coding/performance_culture.md)  
     7. [并发 15 年](https://github.com/Ruikuan/blog/blob/master/Coding/15_years_of_concurrency.md)  
 
-Midori 是一趟迷人的旅程，是我职业生涯里最开心的一段日子。我希望能够分享这旅程的一段给你。 
+Midori 是一趟迷人的旅程，是我职业生涯里最开心的一段日子。我愿能够分享这旅程的一部分给你。 
 
 
 > 原文：[Blogging about Midori](http://joeduffyblog.com/2015/11/03/blogging-about-midori/)
