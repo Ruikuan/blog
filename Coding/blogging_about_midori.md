@@ -1,4 +1,4 @@
-# 关于 Midori
+# 关于 Midori 的博客
 
 应该已经过去了足够的时间了吧，现在提及我之前在微软的项目 “Midori” 应该没有问题了。在接下来的几个月里，我将会发表大概十几篇文章，谈谈关于这个项目里面的内容，涉及一些很有趣的方面和要点。 
 
@@ -10,7 +10,7 @@
 
 我首先得承认，我们也不知道最后 Midori 会怎么样。这对研究来说很正常。我最遗憾的是我们没有一开始就将它开源，这样整个互联网的精英就能够合理地评判它了。像其他所有的大公司一样，决定 Midori 核心技术的命运的，不是完全技术驱动的，更悲哀的是，甚至不是完全业务驱动的。不过在这方面我们也学到了一些重要的教训。另一个我最遗憾的是没有多发表几篇论文。所以写下这些博客来弥补一下。
 
-新文章发表地后，我将会更新下面这个列表。  
+新文章发表后，我将会更新下面这个列表。  
     1. [三种安全](https://github.com/Ruikuan/blog/blob/master/Coding/a_tale_of_three_safeties.md)   
     2. [关于安全能力的对象](https://github.com/Ruikuan/blog/blob/master/Coding/objects_as_secure_capabilities.md)  
     3. [一切都是异步](https://github.com/Ruikuan/blog/blob/master/Coding/asynchronous_everything.md)  
@@ -19,4 +19,7 @@
     6. [性能文化](https://github.com/Ruikuan/blog/blob/master/Coding/performance_culture.md)  
     7. [并发 15 年](https://github.com/Ruikuan/blog/blob/master/Coding/15_years_of_concurrency.md)  
 
-Midori 是一趟迷人的旅程，是我职业生涯里最开心的一段日子。我希望能够分享这旅程的一段给你。
+Midori 是一趟迷人的旅程，是我职业生涯里最开心的一段日子。我希望能够分享这旅程的一段给你。 
+
+
+> 原文：[Blogging about Midori](http://joeduffyblog.com/2015/11/03/blogging-about-midori/)
