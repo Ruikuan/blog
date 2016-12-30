@@ -11,7 +11,7 @@
 我首先得承认，我们也不知道最后 Midori 会怎么样。这对研究来说很正常。我最遗憾的是我们没有一开始就将它开源，这样整个互联网的精英就能够合理地评判它了。像其他所有的大公司一样，决定 Midori 核心技术的命运的因素，不是完全技术驱动的，更悲哀的是，甚至不是完全业务驱动的。不过在这方面我们也学到了一些重要的教训。另一个我最遗憾的是没有多发表几篇论文。所以写下这些博客，当是一种弥补。
 
 新文章发表后，我将会更新下面这个列表。  
-    1. [三种安全](https://github.com/Ruikuan/blog/blob/master/Coding/a_tale_of_three_safeties.md)   
+    1. [三种安全性](https://github.com/Ruikuan/blog/blob/master/Coding/a_tale_of_three_safeties.md)   
     2. [关于安全能力的对象](https://github.com/Ruikuan/blog/blob/master/Coding/objects_as_secure_capabilities.md)  
     3. [一切都是异步](https://github.com/Ruikuan/blog/blob/master/Coding/asynchronous_everything.md)  
     4. [安全的本地代码](https://github.com/Ruikuan/blog/blob/master/Coding/safe_native_code.md)  
