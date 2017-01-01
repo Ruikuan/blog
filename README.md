@@ -24,3 +24,5 @@
     * [RouterOS 中的 NAT](https://github.com/Ruikuan/blog/blob/master/RouterOS/routeros_nat.md)
 * Blogging about Midori
     * [关于 Midori 的博客](https://github.com/Ruikuan/blog/blob/master/Coding/blogging_about_midori.md)
+* 生活
+    * [回想我高考前的一年](https://github.com/Ruikuan/blog/blob/master/times/2017.md)
