@@ -26,3 +26,4 @@
     * [关于 Midori 的博客](https://github.com/Ruikuan/blog/blob/master/Coding/blogging_about_midori.md)
 * 生活
     * [回想我高考前的一年](https://github.com/Ruikuan/blog/blob/master/times/2017.md)
+    * [2017 目标](https://github.com/Ruikuan/blog/blob/master/times/2017_next.md)
