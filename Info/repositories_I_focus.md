@@ -15,6 +15,7 @@
     * [DependencyInjection](https://github.com/aspnet/DependencyInjection)
 * [Elasticsearch](https://github.com/elastic/elasticsearch) A Distributed RESTful Search Engine
 * [nopCommerce](https://github.com/nopSolutions/nopCommerce) 基于 asp.net(no core) 的电子商务网站，有点重，不支持 async
+* [SimplCommerce](https://github.com/simplcommerce/SimplCommerce) A super simple, cross platform, modularized ecommerce system built on .NET Core
 * [NMemory](https://github.com/tamasflamich/nmemory) 一个用 c# 开发的内存数据库，不一定好用，就看看实现方式
 * [CSharpEWAH](https://github.com/lemire/csharpewah) 用 c# 写的位图索引压缩库，很久很久没更新了
 * [Orchard](https://github.com/OrchardCMS/Orchard) 一个基于 asp.net mvc 的 CMS
