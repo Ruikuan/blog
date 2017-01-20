@@ -8,6 +8,7 @@
     * [在 asp.net core 中通过非注入的方式获取 service](https://github.com/Ruikuan/blog/blob/master/Coding/serviceprovider.md)
     * [一个小脚本](https://github.com/Ruikuan/blog/blob/master/Coding/a_simple_script.md)
     * [Midori 学习片段](https://github.com/Ruikuan/blog/blob/master/Coding/midori_lessons.md)
+    * [Asp.net core model bind 的一个问题](https://github.com/Ruikuan/blog/blob/master/Coding/model_bind_issue.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
