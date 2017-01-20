@@ -45,4 +45,9 @@
 * [Ulterius](https://github.com/Ulterius/server) 基于 .NET 的远程管理解决方案，管理服务器的文件、监控硬件资源等。貌似不是太高端，但它能传界面到浏览器。
 * [Wyam](https://github.com/Wyamio/Wyam) Wyam is a simple to use, highly modular, and extremely configurable static content generator that can be used to generate web sites, produce documentation, create ebooks, and much more. 
 * [Jint](https://github.com/sebastienros/jint) Jint is a Javascript interpreter for .NET which provides full ECMA 5.1 compliance and can run on any .NET platform. Because it doesn't generate any .NET bytecode nor use the DLR it runs relatively small scripts faster.
-
+* [Zepto.js](https://github.com/madrobby/zepto) Zepto is a minimalist JavaScript library for modern browsers with a largely jQuery-compatible API. If you use jQuery, you already know how to use Zepto.
+* 图形处理库
+    * [ImageSharp](https://github.com/JimBobSquarePants/ImageSharp) 完全托管代码写成，可移植。完成度高，但不是非常完善，性能尚可
+    * [Magick.NET](https://magick.codeplex.com/) 完善，支持 .NET Core 但只支持 Windows，后面可能会改。追求图像质量。
+    * [CoreCompat.System.Drawing](https://github.com/CoreCompat/CoreCompat) 完全支持 System.Drawing 的 API，支持 Linux，但照样用的 GDI+，不适合多线程使用
+    * [SkiaSharp](https://github.com/mono/SkiaSharp/) The .NET wrapper for [Google’s Skia cross-platform 2D graphics library](https://skia.org/). 非常快，但目前还不支持 .NET core，可以在 mono 上跑。
