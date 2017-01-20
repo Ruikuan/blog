@@ -5,11 +5,14 @@
 ```csharp
 class A
 {
-    public bool CanDelete()
+    public bool CanDelete
     {
-        //....
-        if (someObject.IsOver()) return false;
-        //....
+        get
+        {
+            //....
+            if (someObject.IsOver()) return false;
+            //....
+        }
     }
 }
 ```
