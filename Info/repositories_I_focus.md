@@ -51,3 +51,4 @@
     * [Magick.NET](https://magick.codeplex.com/) 完善，支持 .NET Core 但只支持 Windows，后面可能会改。追求图像质量。
     * [CoreCompat.System.Drawing](https://github.com/CoreCompat/CoreCompat) 完全支持 System.Drawing 的 API，支持 Linux，但照样用的 GDI+，不适合多线程使用
     * [SkiaSharp](https://github.com/mono/SkiaSharp/) The .NET wrapper for [Google’s Skia cross-platform 2D graphics library](https://skia.org/). 非常快，但目前还不支持 .NET core，可以在 mono 上跑。
+* [WeChatircd](https://github.com/MaskRay/wechatircd) IRC控制微信 [让IRC客户端控制微信网页版](https://maskray.me/blog/2017-02-19-how-i-use-wechat-recent-updates-of-wechatircd)
