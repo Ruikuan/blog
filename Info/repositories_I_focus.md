@@ -8,6 +8,7 @@
     * [.NET Compiler Platform ("Roslyn")](https://github.com/dotnet/roslyn)
     * [.NET Core Lab](https://github.com/dotnet/corefxlab) This repo is for experimentation and exploring new ideas that may or may not make it into the main corefx repo.
         * [Span<T>](https://github.com/dotnet/corefxlab/blob/master/docs/specs/span.md) Span<T> is a new type we are adding to the platform to represent contiguous regions of arbitrary memory, with performance characteristics on par with T[]. 
+    * [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet) BenchmarkDotNet is a powerful .NET library for benchmarking.
 * [asp.net core home](https://github.com/aspnet/home) 
     * [asp.net core mvc](https://github.com/aspnet/Mvc)
     * [Entity Framework Core](https://github.com/aspnet/EntityFramework) 
