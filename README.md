@@ -10,6 +10,7 @@
     * [Midori 学习片段](https://github.com/Ruikuan/blog/blob/master/Coding/midori_lessons.md)
     * [Asp.net core model bind 的一个问题](https://github.com/Ruikuan/blog/blob/master/Coding/model_bind_issue.md)
     * [重读《深入理解计算机系统》](https://github.com/Ruikuan/blog/blob/master/Coding/computer_system_reread.md)
+    * [解决因为卸载 vs2015 导致 LocalDB 没法使用的问题](https://github.com/Ruikuan/blog/blob/master/Coding/uninstall_vs2015_sucks.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
