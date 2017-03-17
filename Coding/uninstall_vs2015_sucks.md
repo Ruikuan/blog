@@ -27,6 +27,10 @@ sqllocaldb v
 ```
 (LocalDB)\\MSSQLLocalDB
 ```
-而因为 connection string 是保存在 json 文件中的，将“\”写成了“\\”做转义。将它改过来，SSMS 也能顺利连上去了。因为这个乌龙，导致排查过程中花了不少时间。
+而因为 connection string 是保存在 json 文件中的，将“\”写成了“\\\\”做转义。将它改过来:
+```
+(LocalDB)\MSSQLLocalDB
+```
+SSMS 也能顺利连上去了。因为这个乌龙，导致排查过程中花了不少时间。
 
 至此，问题都解决了，避免了一次要重装系统的危机。总结一下主要问题在于 SSMS 连接服务器的乌龙，导致排查时间大大增加。另外一个是 localdb 不同版本的兼容性，导致问题。
