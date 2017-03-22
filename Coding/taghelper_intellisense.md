@@ -1,7 +1,7 @@
 # asp.net core 1.1 Razor taghelper intellisense 启用办法
 
 从 taghelper 加入到 asp.net mvc 中，在 visualstudio 中编辑 view 时就支持 intellisense。例如，当你在一个 &lt;a> 中输入 asp- 时，它会自动列出 a 对应的 taghelper 供你自动补全，是一个挺方便的功能。  
-![taghelper intellisense](https://github.com/Ruikuan/blog/raw/master/Content/taghelper.jpg)
+![taghelper intellisense](https://github.com/Ruikuan/blog/raw/master/Content/taghelper.png)
 
 问题是自从开始进入 asp.net core 升级到 1.0 之后，这个 intellisense 就没有了，在 visualstudio 2015 update3 中没有，为这个我还升级到了 visualstudio 2017 RC3，还是没有，等 2017 正式版出来，也还是没有。翻看一下 taghelper github 的 issue，开发团队说还没有搞好，正在努力开发中。看来靠不住了。虽然没有它也能照常开发，事实上我项目中的绝大部分都是在没有的情况下开发出来的，但有这东西能省不少力气，而且一眼看过去就知道是不是拼写错了，符合 taghelper 的属性是另一种颜色。现在只能靠肉眼看，写错了不管编译还是运行都不会有什么错误，只是生成的 html 不是预想中的，这样就给找问题带来了麻烦。
 
