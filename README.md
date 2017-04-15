@@ -33,3 +33,4 @@
 * 生活
     * [回想我高考前的一年](https://github.com/Ruikuan/blog/blob/master/times/2017.md)
     * [2017 目标](https://github.com/Ruikuan/blog/blob/master/times/2017_next.md)
+    * [关于智慧、知识以及能力的一些随想](https://github.com/Ruikuan/blog/blob/master/times/about1.md)
