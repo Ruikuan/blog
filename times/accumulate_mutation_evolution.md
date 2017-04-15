@@ -6,9 +6,9 @@
 
 演进的一些事实是令人很惊讶的，例如从一开始的基本的基因，到复杂的形态，到多样的形态，由于累积的效应，其实并不需要很多步骤。
 
-![复杂演变](https://github.com/Ruikuan/blog/raw/master/Content/evolution1.jpg)
+![复杂演变](https://github.com/Ruikuan/blog/raw/master/Content/evolution1.png)
 
-![多样演变](https://github.com/Ruikuan/blog/raw/master/Content/evolution2.jpg)
+![多样演变](https://github.com/Ruikuan/blog/raw/master/Content/evolution2.png)
 
 这不禁让我展开联想。
 
