@@ -15,6 +15,7 @@
     * [如何避免值类型通过泛型接口使用导致的装箱](https://github.com/Ruikuan/blog/blob/master/Coding/generic_interface_avoid_box.md)
     * [.net 中的大对象](https://github.com/Ruikuan/blog/blob/master/Coding/dotnet_loh.md)
     * [关于 ValueTask](https://github.com/Ruikuan/blog/blob/master/Coding/about_valuetask.md)
+    * [Razor 预编译与 Partial View 搜索](https://github.com/Ruikuan/blog/blob/master/Coding/precompiled_and_partial_view.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
