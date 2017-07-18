@@ -17,6 +17,7 @@
     * [关于 ValueTask](https://github.com/Ruikuan/blog/blob/master/Coding/about_valuetask.md)
     * [Razor 预编译与 Partial View 搜索](https://github.com/Ruikuan/blog/blob/master/Coding/precompiled_and_partial_view.md)
     * [加密 SQLServer 数据库备份及还原](https://github.com/Ruikuan/blog/blob/master/Coding/encrypt_backup_sqlserver.md)
+    * [Asp.net core 的一个 model binding 问题](https://github.com/Ruikuan/blog/blob/master/Coding/model_binding_fail.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
