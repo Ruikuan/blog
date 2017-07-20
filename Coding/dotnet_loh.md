@@ -27,4 +27,5 @@ unsafe struct CharArray
 }
 ```
 
-在实践中，大对象经常是比较长的字符串，例如 xml、生成的 html、以及传来传去的 json 等，这都是需要注意的地方。譬如小心选择靠谱的 json 序列化方案，限制用户上传的内容长度或将长度分块，流式处理数据以避免分配过多内存等。
+在实践中，大对象经常是比较长的字符串，例如 xml、生成的 html、以及传来传去的 json 等，这都是需要注意的地方。譬如小心选择靠谱的 json 序列化方案，限制用户上传的内容长度或将长度分块，流式处理数据以避免分配过多内存等。  
+4. 使用非托管的内存，使用 Marshal.AllocHGlobal 或 Marshal.AllocCoTaskMem 分配内存，然后对应地手动使用 Marshal.FreeHGlobal 和 Marshal.FreeCoTaskMem 来释放内存。这样不会给 GC 增加压力。现实的使用方式可以见 Kestrel 的一些[使用](https://github.com/aspnet/KestrelHttpServer/search?utf8=%E2%9C%93&q=Marshal.Alloc&type=)。
