@@ -21,7 +21,7 @@
     * [一种批量更新数据的 SQL Server 写法](https://github.com/Ruikuan/blog/blob/master/Coding/a_sqlserver_localism.md)
     * [使用 PowerShell 创建自签名 https 证书](https://github.com/Ruikuan/blog/blob/master/Coding/powershell_https_cert.md)
     * [asp.net core Razor 对非英文字符输出编码的问题](https://github.com/Ruikuan/blog/blob/master/Coding/aspnetcore_unicode_issue.md)
-    * [使用 App_offline.htm 将 asp.net 网站进入维护状态](https://github.com/Ruikuan/blog/blob/master/Coding/app_offline.md)
+    * [使用 App_offline.htm 将 asp.net 网站转入维护状态](https://github.com/Ruikuan/blog/blob/master/Coding/app_offline.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
