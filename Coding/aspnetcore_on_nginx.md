@@ -179,8 +179,8 @@ systemctl enable kestrel-demoWeb.service
 启动服务，并验证是不是正常跑起来了：
 
 ```sh
-systemctl start kestrel-hellomvc.service
-systemctl status kestrel-hellomvc.service
+systemctl start kestrel-demoWeb.service
+systemctl status kestrel-demoWeb.service
 ```
 
 顺利的话，就能跑起来了。
