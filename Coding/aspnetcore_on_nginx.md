@@ -6,38 +6,38 @@
 
 首先参考 https://www.microsoft.com/net/learn/get-started/linuxdebian 来将 .net core 安装到 linux 上。
 
-安装系统组件
+安装系统组件：
 
 ```sh
 sudo apt-get update
 sudo apt-get install curl libunwind8 gettext apt-transport-https
 ```
 
-注册可信微软产品 key
+注册可信微软产品 key：
 
 ```sh
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 ```
 
-注册微软产品 feed
+注册微软产品 feed：
 
 ```sh
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/dotnetdev.list'
 ```
 
-安装 .NET Core SDK
+安装 .NET Core SDK：
 
 ```sh
 sudo apt-get update
 sudo apt-get install dotnet-sdk-2.1.4
 ```
-将 dotnet 加到环境 PATH
+将 dotnet 加到环境 PATH：
 ```
 export PATH=$PATH:$HOME/dotnet
 ```
 
-创建一个 console app 并运行，验证下安装有没有问题，输出 Hello world 则表示安装成功。
+创建一个 console app 并运行，验证下安装有没有问题，输出 Hello world 则表示安装成功：
 
 ```sh
 dotnet new console -o myApp
@@ -51,7 +51,7 @@ dotnet run
 
 首先 `publish` 应用 `demoWeb`，可以通过 `dotnet publish -c` 命令，或者通过 visual studio 的 publish 菜单项，将应用 publish 到一个目录中。如果是用 vs 的话，会 publish 到 `.\bin\Release\PublishOutput` 中。使用压缩软件 `winrar` 或其他将此目录中的所有文件压缩到压缩包 `demoWeb.zip`。下面我们假设这个 `demoWeb.zip` 位于 `E:\project\demoWeb\bin\Release\PublishOutput` 中。我们使用 win 10 上的 wsl 来将这个压缩文件复制到服务器。
 
-进入 bash，在 cmd 或者 powershell 中运行
+进入 bash，在 cmd 或者 powershell 中运行：
 ```ps
 bash
 ```
@@ -62,7 +62,7 @@ bash
 cd /mnt/e/project/demoWeb/bin/Release/PublishOutput
 ```
 
-将压缩包复制到服务器端，并解压缩
+将压缩包复制到服务器端，并解压缩：
 ```sh
 scp demoWeb.zip root@mydomain.com:/var/demoWeb
 unzip demoWeb.zip
@@ -84,13 +84,13 @@ app.UseAuthentication();
 ```
 将它重新发布。
 
-安装 nginx
+安装 nginx：
 
 ```sh
 sudo apt-get install nginx
 ```
 
-启动它
+启动它：
 ```sh
 sudo service nginx start
 ```
@@ -119,9 +119,9 @@ http {
 		location / {
 			proxy_pass http://demoWeb;
 			proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection keep-alive;
-            proxy_set_header Host $http_host;
-            proxy_cache_bypass $http_upgrade;
+			proxy_set_header Connection keep-alive;
+			proxy_set_header Host $http_host;
+			proxy_cache_bypass $http_upgrade;
 		}
 	}
 }
@@ -250,9 +250,9 @@ http {
 		location / {
 			proxy_pass http://demoWeb;
 			proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection keep-alive;
-            proxy_set_header Host $http_host;
-            proxy_cache_bypass $http_upgrade;
+			proxy_set_header Connection keep-alive;
+			proxy_set_header Host $http_host;
+			proxy_cache_bypass $http_upgrade;
 		}
         # 让 let's encrypt 的访问穿透 demoWeb 应用，让它可以获取它需要的内容
 		location /.well-known/acme-challenge {
@@ -298,9 +298,9 @@ http {
 		location / {
 			proxy_pass http://demoWeb;
 			proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection keep-alive;
-            proxy_set_header Host $http_host;
-            proxy_cache_bypass $http_upgrade;
+			proxy_set_header Connection keep-alive;
+			proxy_set_header Host $http_host;
+			proxy_cache_bypass $http_upgrade;
 		}
         # 让 let's encrypt 的访问穿透 demoWeb 应用，让它可以获取它需要的内容
 		location /.well-known/acme-challenge {
@@ -325,9 +325,9 @@ http {
 		location / {
 			proxy_pass http://demoWeb;
 			proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection keep-alive;
-            proxy_set_header Host $http_host;
-            proxy_cache_bypass $http_upgrade;
+			proxy_set_header Connection keep-alive;
+			proxy_set_header Host $http_host;
+			proxy_cache_bypass $http_upgrade;
 		}
 	}
 }
@@ -363,7 +363,7 @@ http {
 		location / {
 			# 将请求重定向到 https
 			add_header Strict-Transport-Security max-age=15768000;
-            return 301 https://$host$request_uri;
+			return 301 https://$host$request_uri;
 		}
         # 让 let's encrypt 的访问穿透 demoWeb 应用，让它可以获取它需要的内容
 		location /.well-known/acme-challenge {
@@ -388,9 +388,9 @@ http {
 		location / {
 			proxy_pass http://demoWeb;
 			proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection keep-alive;
-            proxy_set_header Host $http_host;
-            proxy_cache_bypass $http_upgrade;
+			proxy_set_header Connection keep-alive;
+			proxy_set_header Host $http_host;
+			proxy_cache_bypass $http_upgrade;
 		}
 	}
 }
