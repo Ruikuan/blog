@@ -62,9 +62,14 @@ bash
 cd /mnt/e/project/demoWeb/bin/Release/PublishOutput
 ```
 
-将压缩包复制到服务器端，并解压缩：
+将压缩包复制到服务器端：
 ```sh
 scp demoWeb.zip root@mydomain.com:/var/demoWeb
+```
+在服务器端解压缩：
+
+```sh
+cd /var/demoWeb
 unzip demoWeb.zip
 ```
 
