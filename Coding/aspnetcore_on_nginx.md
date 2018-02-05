@@ -259,7 +259,7 @@ http {
 			proxy_set_header Host $http_host;
 			proxy_cache_bypass $http_upgrade;
 		}
-        # 让 let's encrypt 的访问穿透 demoWeb 应用，让它可以获取它需要的内容
+		# 让 let's encrypt 的访问穿透 demoWeb 应用，让它可以获取它需要的内容
 		location /.well-known/acme-challenge {
 			root /var/www/letsencrypt;
 		}
@@ -307,13 +307,13 @@ http {
 			proxy_set_header Host $http_host;
 			proxy_cache_bypass $http_upgrade;
 		}
-        # 让 let's encrypt 的访问穿透 demoWeb 应用，让它可以获取它需要的内容
+		# 让 let's encrypt 的访问穿透 demoWeb 应用，让它可以获取它需要的内容
 		location /.well-known/acme-challenge {
 			root /var/www/letsencrypt;
 		}
 	}
-    # 加入 https 节点
-    server {
+	# 加入 https 节点
+	server {
 		listen 443 ssl;
 		server_name mydomain.com;
 		ssl on;
@@ -370,13 +370,13 @@ http {
 			add_header Strict-Transport-Security max-age=15768000;
 			return 301 https://$host$request_uri;
 		}
-        # 让 let's encrypt 的访问穿透 demoWeb 应用，让它可以获取它需要的内容
+		# 让 let's encrypt 的访问穿透 demoWeb 应用，让它可以获取它需要的内容
 		location /.well-known/acme-challenge {
 			root /var/www/letsencrypt;
 		}
 	}
-    # 加入 https 节点
-    server {
+	# 加入 https 节点
+	server {
 		listen 443 ssl;
 		server_name mydomain.com;
 		ssl on;
