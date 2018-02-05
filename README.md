@@ -22,7 +22,7 @@
     * [使用 PowerShell 创建自签名 https 证书](https://github.com/Ruikuan/blog/blob/master/Coding/powershell_https_cert.md)
     * [asp.net core Razor 对非英文字符输出编码的问题](https://github.com/Ruikuan/blog/blob/master/Coding/aspnetcore_unicode_issue.md)
     * [使用 App_offline.htm 将 asp.net 网站转入维护状态](https://github.com/Ruikuan/blog/blob/master/Coding/app_offline.md)
-    * [在 linux 上用 nginx 代理 asp.net core 应用并使用 let's encrypt 证书开启 https](https://github.com/Ruikuan/blog/blob/master/Coding/G:\blog\Coding\aspnetcore_on_nginx.md)
+    * [在 linux 上用 nginx 代理 asp.net core 应用并使用 let's encrypt 证书开启 https](https://github.com/Ruikuan/blog/blob/master/Coding/aspnetcore_on_nginx.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
