@@ -49,7 +49,7 @@
 * [Zepto.js](https://github.com/madrobby/zepto) Zepto is a minimalist JavaScript library for modern browsers with a largely jQuery-compatible API. If you use jQuery, you already know how to use Zepto.
 * 图形处理库
     * [ImageSharp](https://github.com/JimBobSquarePants/ImageSharp) 完全托管代码写成，可移植。完成度高，但不是非常完善，性能尚可
-    * [Magick.NET](https://magick.codeplex.com/) 完善，支持 .NET Core 但只支持 Windows，后面可能会改。追求图像质量。
+    * [Magick.NET](https://github.com/dlemstra/Magick.NET) 完善，支持 .NET Core 但只支持 Windows，后面可能会改。追求图像质量。
     * [CoreCompat.System.Drawing](https://github.com/CoreCompat/CoreCompat) 完全支持 System.Drawing 的 API，支持 Linux，但照样用的 GDI+，不适合多线程使用
     * [SkiaSharp](https://github.com/mono/SkiaSharp/) The .NET wrapper for [Google’s Skia cross-platform 2D graphics library](https://skia.org/). 非常快，但目前还不支持 .NET core，可以在 mono 上跑。
 * [WeChatircd](https://github.com/MaskRay/wechatircd) IRC控制微信 [让IRC客户端控制微信网页版](https://maskray.me/blog/2017-02-19-how-i-use-wechat-recent-updates-of-wechatircd)
