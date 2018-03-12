@@ -22,6 +22,23 @@ ffmpeg -f concat -i list.txt -c copy output.mp4
 ```
 轻松搞定。
 
+## 处理音频
+
+### 将 MP4 中的音频转录到 MP3
+
+```
+ffmpeg -i filename.mp4 filename.mp3
+```
+或
+```
+ffmpeg -i video.mp4 -b:a 192K -vn music.mp3
+```
+
+### 截取 MP3 中的一段
+
+```
+ffmpeg -i file.mp3 -ss 00:00:20 -to 00:00:40 -c copy file-2.mp3
+```
 
 #### 参考
 > [Using ffmpeg to cut up video](https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video)  
