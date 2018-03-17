@@ -40,6 +40,12 @@ ffmpeg -i video.mp4 -b:a 192K -vn music.mp3
 ffmpeg -i file.mp3 -ss 00:00:20 -to 00:00:40 -c copy file-2.mp3
 ```
 
+### 合并 MP3
+
+```
+ffmpeg -i "concat:1.mp3|2.mp3" -acodec copy output.mp3
+```
+
 #### 参考
 > [Using ffmpeg to cut up video](https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video)  
 > [Concatenate two mp4 files using ffmpeg](https://stackoverflow.com/questions/7333232/concatenate-two-mp4-files-using-ffmpeg)
