@@ -61,6 +61,8 @@ bash
 ```sh
 cd /mnt/e/project/demoWeb/bin/Release/PublishOutput
 ```
+**上面这个步骤可以省略，可以在压缩包所在目录按住 shift 点击右键，选择在此打开 powershell，然后在 powershell 中输入 bash，即可在 bash 中切换到当前目录。**
+
 
 将压缩包复制到服务器端：
 ```sh
