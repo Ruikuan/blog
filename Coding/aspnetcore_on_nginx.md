@@ -122,7 +122,7 @@ http {
 	server {
 		listen 80;
 		server_name mydomain.com;
-
+		#client_max_body_size 2M;
 		location / {
 			proxy_pass http://demoWeb;
 			proxy_set_header Upgrade $http_upgrade;
@@ -133,6 +133,8 @@ http {
 	}
 }
 ```
+
+如果需要允许请求的大小增加，可以在 http/server/location 里面增加 `client_max_body_size` 项来配置最大的请求大小，默认为 1MB。
 
 保存文件，验证并重新加载 nginx 的配置：
 
