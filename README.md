@@ -26,7 +26,7 @@
     * [从地球坐标系到火星坐标系](https://github.com/Ruikuan/blog/blob/master/Coding/earth_to_mars.md)
     * [dotnetcore 无法获取 GBK(GB2312) Encoding 的问题](https://github.com/Ruikuan/blog/blob/master/Coding/dotnetcode_encoding.md)
     * [使用 MagickImage.NET 的一些坑](https://github.com/Ruikuan/blog/blob/master/Coding/magickImage_issues.md)
-    * [dotnetcore 2.1 性能改进](https://github.com/Ruikuan/blog/blob/master/Coding/dotnetcore2.1_perf.md)
+    * [.Net Core 2.1 性能改进](https://github.com/Ruikuan/blog/blob/master/Coding/dotnetcore2.1_perf.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)

@@ -1,6 +1,6 @@
-# dotnetcore 2.1 性能改进
+# .Net Core 2.1 性能改进
 
-根据 [Performance Improvements in .NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/04/18/performance-improvements-in-net-core-2-1/) 一文总结。比较的对象为 dotnetcore 2.0。
+根据 [Performance Improvements in .NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/04/18/performance-improvements-in-net-core-2-1/) 一文总结。比较的对象为 .Net Core 2.0。
 
 ## JIT
 
