@@ -53,8 +53,8 @@
 ## And More
 
 * `Directory.EnumerateFiles` ~3x，allocated 1/2。
-* `System.Security.Cryptography.Rfc2898DeriveBytes.GetBytes` 由于 `Span` 的使用完全消除了计算过程中的分配。总得分配：1120120 B -> 176 B，性能有所提高。
+* `System.Security.Cryptography.Rfc2898DeriveBytes.GetBytes` 由于 `Span` 的使用完全消除了计算过程中的分配。总的分配：1120120 B -> 176 B，性能有所提高。
 * `Guid.NewGuid()` 在 linux 上有 4 倍的提升。
-* 数组处理、LINQ、Environment、collection、globalization、pooling、SqlClient、StreamWriter、StreamReader 等都有很大的改进。
+* [数组处理](https://github.com/dotnet/coreclr/pull/13962)、[LINQ](https://github.com/dotnet/corefx/pull/23368)、[Environment](https://github.com/dotnet/coreclr/pull/14502)、[collection](https://github.com/dotnet/corefx/pull/26087)、[globalization](https://github.com/dotnet/coreclr/pull/17399)、[pooling](https://github.com/dotnet/coreclr/pull/17078)、[SqlClient](https://github.com/dotnet/corefx/pull/27758)、[StreamWriter 和 StreamReader](https://github.com/dotnet/corefx/pull/22147) 等都有很大的改进。
 * `Regex.Compiled` 回来了而且生效，Match 性能提高约一倍。
 
