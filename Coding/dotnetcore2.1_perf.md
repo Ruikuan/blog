@@ -5,7 +5,7 @@
 ## JIT
 
 * `EqualityComparer<T>.Default.Equals` 能被 intrinsic 识别，devirtualize 并 inline，带来 ~2.5x 的性能提升。
-* 受上面的影响，`Dictionary<Tkey,TValue>` 的 `ContainsValue` 也提升了 ~2.25x；上面基本上给所有的集合类搜索都带来了客观的提升。
+* 受上面的影响，`Dictionary<Tkey,TValue>` 的 `ContainsValue` 也提升了 ~2.25x；上面基本上给所有的集合类搜索都带来了可观的提升。
 * 需在代码中直接使用 `EqualityComparer<T>.Default.Equals`，而不是先将 `EqualityComparer<T>.Default` 放到一个变量，然后用那个变量的 `Equal` 方法，这种微优化由于 JIT 识别不出来，无法生成高效的代码从而变成了**负优化**。
 * ` Enum.HasFlag` 也成了 intrinsic，从原来的臭名昭著的反射实现变成了 JIT 直接位操作，性能提升 ~50x，并且不会再有 allocate。
 * JIT 将循环中的局部 return 移到热路径外，不再需要使用 goto 等 trick 来优化，从而改善了代码编写的 shape。
