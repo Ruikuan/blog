@@ -17,7 +17,7 @@
 * 优化了 threadstatic 的访问性能。
 * 改善了 Monitor 在存在争用情况下的开销。
 * 改善了 ReaderWriterLockSlim 的 scalability。
-* 将 Timer 的所有操作从竞争一个全局锁的串行改成多个锁，提高并行度。
+* 将 Timer 的所有操作（create, modify, fire, remove）从竞争一个全局锁的串行改成多个锁，提高并行度。
 * 将 `CancellationTokenSource. CancellationToken` 的关注重点从 scalability 更改为 throughput 和 allocation，实现了 ~1.7x 的性能提升和 0 分配。
 * await 同步返回的 async 方法的开销削减，性能提升 ~1.5x。
 * await 异步的 async 方法的分配从 4 个对象缩减为 1 个，从而将分配空间减少一半。
