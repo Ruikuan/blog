@@ -27,7 +27,8 @@
     * [dotnetcore 无法获取 GBK(GB2312) Encoding 的问题](https://github.com/Ruikuan/blog/blob/master/Coding/dotnetcode_encoding.md)
     * [使用 MagickImage.NET 的一些坑](https://github.com/Ruikuan/blog/blob/master/Coding/magickImage_issues.md)
     * [.Net Core 2.1 性能改进](https://github.com/Ruikuan/blog/blob/master/Coding/dotnetcore2.1_perf.md)
-    * [`Memory<T>` 使用 guideline](https://github.com/Ruikuan/blog/blob/master/Coding/Memory_T_guideline.md)
+    * [Memory&lt;T> 使用 guideline](https://github.com/Ruikuan/blog/blob/master/Coding/Memory_T_guideline.md)
+    * [ConditionalWeakTable&lt;TKey,TValue> 概括](https://github.com/Ruikuan/blog/blob/master/Coding/ConditionalWeakTable.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
