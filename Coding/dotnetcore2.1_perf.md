@@ -37,7 +37,7 @@
 * `string.Format` 性能 ~1.3x，分配为 2/3。
 * `StringBuilder.Append` 性能 ~2x，分配为 0。
 * 将 coreclr 和 corert 中跟 string 和 span 相关的大部分代码用 C# 重写，以可以应用更好的优化，比原先 c++ 的实现相比有很大的性能改善。譬如 `Int32.ToString()` ~2x；`int.Parse` ~1.3x。
-* 同理，`Int32`, `UInt32`, `Int64`, `UInt64`, `Single`, `Double` 的 `ToString()` 也一样改进。尤其在 linux 有将近 10 倍的提升。
+* 同理，`Int32`, `UInt32`, `Int64`, `UInt64`, `Single`, `Double` 的 `ToString()` 也一样改进。尤其在 unix 有将近 10 倍的提升。
 * `BigInteger.ToString` ~12x！并且 allocated 只为原先的 1/17。
 * `DateTime` 和 `DateTimeOffset` 的 `R` 和 `O` 的 `ToString`，分别提升 ~4x 和 ~2.6x。
 * `Convert.FromBase64String` ~1.5x；`Convert.FromBase64CharArray` ~1.6x。
@@ -48,14 +48,14 @@
 * `IPAddress.HostToNetworkOrder/NetworkToHostOrder` ~8x。
 * `Uri` 的分配降低到原来的一半，初始化 ~1.5x。
 * `Socket` 收发 ~2x。
-* 消除大量 `SslStream` 中的分配，修正它在 linux 中的瓶颈。
+* 消除大量 `SslStream` 中的分配，修正它在 unix 中的瓶颈。
 * `HttpClient` 现在使用完全 C# 编写的 `SocketsHttpHandler`，一个用 `Socket` `SslStream` 和 `NetworkStream` 做服务端，用 `HttpClient` 做客户端通过 https 访问的示例，获得了 12.7 倍的性能飙升！同时分配也大大减少，也没了 Gen1 对象。
 
 ## And More
 
 * `Directory.EnumerateFiles` ~3x，allocated 1/2。
 * `System.Security.Cryptography.Rfc2898DeriveBytes.GetBytes` 由于 `Span` 的使用完全消除了计算过程中的分配。总的分配：1120120 B -> 176 B，性能有所提高。
-* `Guid.NewGuid()` 在 linux 上有 4 倍的提升。
+* `Guid.NewGuid()` 在 unix 上有 4 倍的提升。
 * [数组处理](https://github.com/dotnet/coreclr/pull/13962)、[LINQ](https://github.com/dotnet/corefx/pull/23368)、[Environment](https://github.com/dotnet/coreclr/pull/14502)、[collection](https://github.com/dotnet/corefx/pull/26087)、[globalization](https://github.com/dotnet/coreclr/pull/17399)、[pooling](https://github.com/dotnet/coreclr/pull/17078)、[SqlClient](https://github.com/dotnet/corefx/pull/27758)、[StreamWriter 和 StreamReader](https://github.com/dotnet/corefx/pull/22147) 等都有很大的改进。
 * `Regex.Compiled` 回来了而且生效，Match 性能提高约一倍。
 
