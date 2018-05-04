@@ -29,6 +29,7 @@
     * [.Net Core 2.1 性能改进](https://github.com/Ruikuan/blog/blob/master/Coding/dotnetcore2.1_perf.md)
     * [Memory&lt;T> 使用 guideline](https://github.com/Ruikuan/blog/blob/master/Coding/Memory_T_guideline.md)
     * [ConditionalWeakTable&lt;TKey,TValue> 概括](https://github.com/Ruikuan/blog/blob/master/Coding/ConditionalWeakTable.md)
+    * [All about Span](https://github.com/Ruikuan/blog/blob/master/Coding/all_about_span.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
