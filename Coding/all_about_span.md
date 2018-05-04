@@ -126,7 +126,7 @@ for (int i = 0; i < chars.Length; i++)
 string id = new string(chars);
 ```
 
-用 `Span<char>` 可以在栈上分配，并避免 unsafe 的使用，结合新的接受 `ReadOnlySpan<char>` 的字符串构造方法，可以将生成算法修改为：
+用 `Span<char>` 可以在栈上分配，并避免 `unsafe` 的使用，结合新的接受 `ReadOnlySpan<char>` 的字符串构造方法，可以将生成算法修改为：
 
 ```cs
 int length = ...;
@@ -139,7 +139,7 @@ for (int i = 0; i < chars.Length; i++)
 string id = new string(chars);
 ```
 
-这样就避免了在堆上做临时的字符串数组分配，但还是需要一次额外的复制操作将生成数据从栈上复制到字符串中。而且这种使用方式只适用于字符串小的情况，如果长的话就会导致栈溢出了。那么能否直接写道字符串所在的内存呢？`Span<T>` 让你可以这么做。在新的 `string` 的构造函数之外，它还多了个 `Create` 方法：
+这样就避免了在堆上做临时的字符串数组分配，但还是需要一次额外的复制操作将生成数据从栈上复制到字符串中。而且这种使用方式只适用于字符串小的情况，如果长的话就会导致栈溢出。那么能否直接写道字符串所在的内存呢？`Span<T>` 让你可以这么做。在 `string` 新的构造函数之外，它还多了个 `Create` 方法：
 
 ```cs
 public static string Create<TState>(
@@ -164,7 +164,7 @@ string id = string.Create(length, rand, (Span<char> chars, Random r) =>
 
 这样就可以直接在字符串空间中任意填充了，不仅避免了复制，而且没有了大小的限制。
 
-除了核心的框架类型有了新的成员之外，还有很多的新的 .NET 类型被开发来跟 `Span<T>` 一起对特定的场景进行高效处理。例如，开发人员发现如果他们在 UTF-8 上处理字符串不需要 encode 和 decode 的话会获得显著的性能提升。新的类型如 `System.Buffers.Text.Base64`，`System.Buffers.Text.Utf8Parser` 和 `System.Buffers.Text.Utf8Formatter` 被加了进来。它们对字节进行处理，不单避免了 Unicode 的编解码，还运行它们直接在各种网络栈很底层中很常见的 native buffer 上进行操作：
+除了核心的框架类型有了新的成员之外，还有很多的新的 .NET 类型被开发出来跟 `Span<T>` 一起对特定的场景进行高效处理。例如，开发人员发现如果他们在 UTF-8 上处理字符串不需要 encode 和 decode 的话会获得显著的性能提升。新的类型如 `System.Buffers.Text.Base64`，`System.Buffers.Text.Utf8Parser` 和 `System.Buffers.Text.Utf8Formatter` 被加了进来。它们对字节进行处理，不单避免了 Unicode 的编解码，还允许它们直接在各种网络栈很底层中很常见的 native buffer 上进行操作：
 
 ```cs
 ReadOnlySpan<byte> utf8Text = ...;
@@ -185,7 +185,7 @@ ASP.NET Core 现在也重度依赖 `Span<T>`，例如 Kestrel Server 的 HTTP pa
 
 C# 7.2 中引入了跟 span 相关的若干特性（事实上 C# 7.2 的编译器就必须使用 `Span<T>`）。
 
-Ref struct。只能生存在栈上的会传染的值类型。所有想要在字段中包含 ref-like type 的类型都必需定义为 ref struct。例如你想要定义一个用于 `Span<T>` 的 Enumerator：
+**Ref struct**。只能生存在栈上的会传染的值类型。所有想要在字段中包含 ref-like type 的类型都必需定义为 ref struct。例如你想要定义一个用于 `Span<T>` 的 Enumerator：
 
 ```cs
 public ref struct Enumerator
@@ -196,7 +196,7 @@ public ref struct Enumerator
 }
 ```
 
-对 `Span<T>` 的 stackalloc。在以往的 C# 版本中，stackalloc 结果保存在本地的一个指针变量中。在 C# 7.2 中，stackalloc 能作为表达式的一部分使用并且能指向一个 `span`，而且不需要使用 `unsafe` 关键字。所以，以往的写法：
+**对 `Span<T>` 的 stackalloc**。在以往的 C# 版本中，stackalloc 结果保存在本地的一个指针变量中。在 C# 7.2 中，stackalloc 能作为表达式的一部分使用并且能指向一个 `span`，而且不需要使用 `unsafe` 关键字。所以，以往的写法：
 
 ```cs
 Span<byte> bytes;
@@ -219,5 +219,5 @@ Span<byte> bytes = length <= 128 ? stackalloc byte[length] : new byte[length];
 ... // Code that operates on the Span<byte>
 ```
 
-`Span` 使用验证。避免 `Span` 从使用栈帧逃离出去引起内存安全问题。
+**`Span` 使用验证**。避免 `Span` 从使用栈帧逃离出去引起内存安全问题。
 
