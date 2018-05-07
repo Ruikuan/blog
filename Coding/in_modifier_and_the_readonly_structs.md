@@ -194,7 +194,7 @@ public int AggregatePassedByIn()
 * `readonly struct` 对于设计和性能角度都很有用。
 * 如果 struct 的大小比 `IntPtr.Size` 大，应该通过 `in` 来传递获得性能提高。
 * 可以通过使用 `in` 来传递引用类型，让自己的设计意图更清晰。（其实也无所谓）
-* 绝不使用 `in` 来传递非 `readonly struct`，因为对性能会造成负面的印象，而且常常是不容易发觉的。
+* 绝不使用 `in` 来传递非 `readonly struct`，因为对性能会造成负面的影响，而且常常是不容易发觉的。
 
 > 来源：[The ‘in’-modifier and the readonly structs in C#](https://blogs.msdn.microsoft.com/seteplia/2018/03/07/the-in-modifier-and-the-readonly-structs-in-c/)  
 > 参考：[Reference semantics with value types](https://docs.microsoft.com/en-us/dotnet/csharp/reference-semantics-with-value-types)
