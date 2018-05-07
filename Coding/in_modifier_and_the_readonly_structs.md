@@ -198,6 +198,10 @@ public int AggregatePassedByIn()
 * `in` 对引用类型和基本的数字类型也可以应用，但基本上没什么特别的作用。
 * 对于通过 `ref readonly` 方法返回的 `struct` 引用，上面会导致防御性复制的内容仍然成立。因此最好也结合 `readonly struct` 使用。
 
+## 番外
+
+可以使用 [ErrorProne.NET](https://blogs.msdn.microsoft.com/seteplia/2018/05/03/avoiding-struct-and-readonly-reference-performance-pitfalls-with-errorprone-net/) 来检查和避免 `struct` 和 `readonly/in` 相关的性能问题。
+
 > 参考：  
 > [The ‘in’-modifier and the readonly structs in C#](https://blogs.msdn.microsoft.com/seteplia/2018/03/07/the-in-modifier-and-the-readonly-structs-in-c/)  
 > [Reference semantics with value types](https://docs.microsoft.com/en-us/dotnet/csharp/reference-semantics-with-value-types)  
