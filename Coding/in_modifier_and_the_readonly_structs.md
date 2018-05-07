@@ -39,7 +39,7 @@ public int AggregateForReadOnlyField()
 
 解决这个问题至少有三个办法：
 
-1. 使用字段而不是使用属性。编译器看到只是访问 struct 字段的操作时，知道不会有副作用，因此不会进行防御性复制。但这个对封装不好。  
+1. 使用字段而不是使用属性。编译器看到只是读取 struct 字段的操作时，知道不会有副作用，因此不会进行防御性复制。但这个对封装不好。  
 2. 不要使用 `readonly` 修饰值类型。  
 3. 使用 `readonly struct`
 
@@ -54,7 +54,7 @@ public readonly struct FairlyLargeStruct
 
 ## `readonly struct`
 
-C# 7.2 允许通过 `readonly struct` 表明值类型的不变性，不但对性能有好处，而且能够更明确表示一种不可变的观点。值不会改变。（不过可以通过某些肮脏的反射操作来破坏。）
+C# 7.2 允许通过 `readonly struct` 表明值类型的 immutable，不但对性能有好处，而且能够更明确表示一种不可变的观点：值是 immutable 的。（不过可以通过某些肮脏的反射操作来破坏。）
 
 `readonly struct` 强制如下行为：
 1. 编译器检查 struct 是真的不可变并且只由 readonly 的字段和/或只读的属性。（像 `public int Foo {get; private set;}` 这种就不是只读的）  
@@ -191,7 +191,7 @@ public int AggregatePassedByIn()
 
 ## 结论
 
-* `readonly struct` 对于设计和性能视点都很有用。
+* `readonly struct` 对于设计和性能角度都很有用。
 * 如果 struct 的大小比 `IntPtr.Size` 大，应该通过 `in` 来传递获得性能提高。
 * 可以通过使用 `in` 来传递引用类型，让自己的设计意图更清晰。（其实也无所谓）
 * 绝不使用 `in` 来传递非 `readonly struct`，因为对性能会造成负面的印象，而且常常是不容易发觉的。
