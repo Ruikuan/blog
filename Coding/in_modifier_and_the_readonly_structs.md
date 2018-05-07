@@ -196,6 +196,7 @@ public int AggregatePassedByIn()
 * 可以通过使用 `in` 来传递引用类型，让自己的设计意图更清晰。（其实也无所谓）
 * 绝不使用 `in` 来传递非 `readonly struct`，因为对性能会造成负面的影响，而且常常是不容易发觉的。
 * `in` 对引用类型和基本的数字类型也可以应用，但基本上没什么特别的作用。
+* 对于通过 `ref readonly` 方法返回的 `struct` 引用，上面会导致防御性复制的内容仍然成立。因此最好也结合 `readonly struct` 使用。
 
 > 来源：[The ‘in’-modifier and the readonly structs in C#](https://blogs.msdn.microsoft.com/seteplia/2018/03/07/the-in-modifier-and-the-readonly-structs-in-c/)  
 > 参考：[Reference semantics with value types](https://docs.microsoft.com/en-us/dotnet/csharp/reference-semantics-with-value-types)
