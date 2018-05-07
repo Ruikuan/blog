@@ -139,7 +139,7 @@ ByIn("some string"); // Works fine!
 
 ## `in` 修饰符的性能特性
 
-`in` 参数跟 `readonly` 字段相当类似，为了避免破坏 struct 的 `readonly/in` 语义，在调用 struct 的属性和方法之前，编译器会做一次防御性复制，从而导致性能降低。因此，**绝不应该通过 `in` 来传递非 `readonly struct` 结构体！**非 `readonly struct` 通过 `in` 传递常常导致频繁的防御性复制，让性能变得更糟。
+`in` 参数跟 `readonly` 字段相当类似，为了避免破坏 struct 的 `readonly/in` 语义，在调用 struct 的属性和方法之前，编译器会做一次防御性复制，从而导致性能降低。因此，**绝不应该通过 `in` 来传递非 `readonly struct` 结构体**！非 `readonly struct` 通过 `in` 传递常常导致频繁的防御性复制，让性能变得更糟。
 
 ```cs
 public struct FairlyLargeStruct
