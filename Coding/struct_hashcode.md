@@ -32,3 +32,7 @@ struct Test
 ## 结论
 
 由于 `struct` 的 layout 经常不可控（调换下字段的顺序就可能造成影响），以及情况 2 的存在，使用默认的 `GetHashCode` 实现是很不明智的。对于自定义的 `struct`，绝不要使用默认实现，应该自定义靠谱的 `GetHashCode`。
+
+## 番外
+
+对于 `Enum`，调用它的 `Equals` 会导致装箱（之前版本的 clr 调用 `GetHashCode` 也会，目前版本的改过来了）。为了避免这种情况，请调用 ` EqualityComparer<Enum>.Default.Equals(enum1, enum2)`。
