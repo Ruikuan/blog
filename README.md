@@ -33,6 +33,7 @@
     * [.net 中接口声明顺序会对性能造成影响](https://github.com/Ruikuan/blog/blob/master/Coding/interface_order.md)
     * [in 修饰符和 readonly struct 以及伴随的性能影响](https://github.com/Ruikuan/blog/blob/master/Coding/in_modifier_and_the_readonly_structs.md)
     * [不要使用 struct 默认的 GetHashCode](https://github.com/Ruikuan/blog/blob/master/Coding/struct_hashcode.md)
+    * [一个提高 dotnet 数组访问性能的小技巧](https://github.com/Ruikuan/blog/blob/master/Coding/a_array_access_trick.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
