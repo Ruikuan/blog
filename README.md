@@ -35,6 +35,7 @@
     * [不要使用 struct 默认的 GetHashCode](https://github.com/Ruikuan/blog/blob/master/Coding/struct_hashcode.md)
     * [一个提高 dotnet 数组访问性能的小技巧](https://github.com/Ruikuan/blog/blob/master/Coding/a_array_access_trick.md)
     * [new() 约束的陷阱](https://github.com/Ruikuan/blog/blob/master/Coding/new_constraint_trap.md)
+    * [避免 .net core 中访问 static field 的性能问题](https://github.com/Ruikuan/blog/blob/master/Coding/static_field_before_init.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
