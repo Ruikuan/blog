@@ -1,6 +1,6 @@
 # 避免 .net core 中访问 static field 的性能问题
 
-由于规范的限制（`beforefieldinit`），clr 在访问 static field 之前要先确认它已经被初始化了，因此每次访问 static field 都会导致一次初始化检查，对性能敏感的应用会造成伤害。.net core 就存在这个问题，而 .net framework 4.7 就比较激进，直接就不检查了，虽然性能比较好，但其实这并不是符合规范的行为。
+由于规范的限制（`beforefieldinit`），clr 在访问 static field 之前要先确认它已经被初始化了，因此每次访问 static field 都会导致一次初始化检查，对性能敏感的应用会造成伤害。.net core 就存在这个问题，而 .net framework 4.7 比较激进，直接就不检查了，虽然性能比较好，但其实这并不是符合规范的行为。
 
 考虑如下代码，在 .net framework 和 .net core 中运行的性能就有很大的差别。
 
