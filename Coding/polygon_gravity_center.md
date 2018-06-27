@@ -47,4 +47,4 @@ function getCenterOfGravityPoint(points) {
 
 > 参考  
 > [几何中心 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E5%87%A0%E4%BD%95%E4%B8%AD%E5%BF%83)  
-> [几何］计算不规则多边形的面积、中心、重心](https://blog.csdn.net/shao941122/article/details/53671643)
+> [［几何］计算不规则多边形的面积、中心、重心](https://blog.csdn.net/shao941122/article/details/53671643)
