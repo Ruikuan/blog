@@ -38,6 +38,7 @@
     * [避免 .net core 中访问 static field 的性能问题](https://github.com/Ruikuan/blog/blob/master/Coding/static_field_before_init.md)
     * [通过 asp.net core 内置的代码实行反射调用/异步调用方法](https://github.com/Ruikuan/blog/blob/master/Coding/ObjectMethodExecutor.md)
     * [解决 Package Cache 越来越大的问题](https://github.com/Ruikuan/blog/blob/master/Coding/solve_package_cache.md)
+    * [多边形中心计算](https://github.com/Ruikuan/blog/blob/master/Coding/polygon_gravity_center.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
