@@ -37,6 +37,14 @@ DDNS
 
 经过测试，能够顺利更新动态域名的 IP。
 
+#### 备注
+
+命令
+```
+/tool fetch url=$url mode=http dst-path=$ednshost
+```
+只有在服务器返回有内容的响应才会执行成功，后面的代码才能继续运行。如果服务器返回一个内容为空的 200 响应（不是出错），这句也是执行不成功。
+
 #### 参考
 > [DDNS动态域名脚本（花生壳+3322公云）for ROS 6.x](http://www.roszj.com/526.html)  
 > [如何在ROS中设置花生壳服务](http://service.oray.com/question/869.html)
