@@ -48,6 +48,7 @@
     * [使用 ffmpeg 切割和合并视频文件](https://github.com/Ruikuan/blog/blob/master/Info/ffmpeg_cut_concat.md)
     * [解决控制面板设备和打印机页面打开非常缓慢的问题](https://github.com/Ruikuan/blog/blob/master/Info/device_printers_slow.md)
     * [ffmpeg 转换视频格式](https://github.com/Ruikuan/blog/blob/master/Info/ffmpeg_convert_format.md)
+    * [解决使用 Win10 共享移动热点无法连接互联网的问题](https://github.com/Ruikuan/blog/blob/master/Info/win10_hotspot_no_internet.md)
 * Digihome
     * [MikroTik RouterOS 将 http 请求重定向到 https](https://github.com/Ruikuan/blog/blob/master/RouterOS/http_redirect_to_https.md)
     * [将 RouterOS 用作 DNS 服务器](https://github.com/Ruikuan/blog/blob/master/RouterOS/custom_dns.md)
