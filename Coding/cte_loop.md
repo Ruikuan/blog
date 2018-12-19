@@ -5,13 +5,15 @@
 ```sql
 ;with Tree as
 (
-	select ParentId
-	from Node
+    select ParentId
+    from Node
     where Id = @id
 
-	select ParentId
-	from Tree T
-		inner join Node n on Node.Id = T.ParentId
+    union all
+
+    select ParentId
+    from Tree T
+        inner join Node n on Node.Id = T.ParentId
 )
 ```
 
@@ -25,9 +27,11 @@
 	from Node
     where Id = @id
 
-	select n.ParentId
+    union all
+
+    select n.ParentId
         , T.linkedIds + '>' + cast(n.ParentId as varchar(max)) as linkedIds
-	from Tree T
+    from Tree T
 		inner join Node n on Node.Id = T.ParentId and ( T.linkedIds not like '%'+ cast(n.ParentId as varchar(max)) + '%')
 )
 ```
