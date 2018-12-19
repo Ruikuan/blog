@@ -22,9 +22,9 @@
 ```sql
 ;with Tree as
 (
-	select ParentId
+    select ParentId
         , cast(ParentId as varchar(max)) as linkedIds
-	from Node
+    from Node
     where Id = @id
 
     union all
