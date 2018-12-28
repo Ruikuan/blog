@@ -1,5 +1,7 @@
 # 在 Mac 系统下使用 Windows 习惯的快捷键
 
+在 macOS Mojave 下适用。
+
 首先通过 `System Preferences - Keyboard - Modifier Keys` 修改修饰键为如下：
 
 ![modifier keys setting](https://raw.githubusercontent.com/Ruikuan/blog/master/Content/modifierKeysSetting.png)
