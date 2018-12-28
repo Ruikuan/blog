@@ -21,7 +21,8 @@
 然后注销重新登录，就可以了。
 
 ### 附录
-|---Character code---|---Description---|
+|Character code|Description|
+|----------- | ----------- |
 |\UF700	|Arrow up|
 |\UF701	|Arrow down|
 |\UF702	|Arrow left|
@@ -38,7 +39,8 @@
 |\U000D	|Return|
 |\U0003	|Enter|
 
-|---Modifier Key Code ---|---Description---|
+|Modifier Key Code|Description|
+|----------- | ----------- |
 |$|Shift|
 |@|Command|
 |^|Control|
