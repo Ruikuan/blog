@@ -16,6 +16,10 @@
     "\UF72B" = moveToEndOfLine:; // end
     "$\UF729" = moveToBeginningOfLineAndModifySelection:; // shift-home
     "$\UF72B" = moveToEndOfLineAndModifySelection:; // shift-end
+    "@\UF729" = moveToBeginningOfDocument:;
+    "$@\UF729" = moveToBeginningOfDocumentAndModifySelection:;
+    "@\UF72B" = moveToEndOfDocument:;
+    "$@\UF72B" = moveToEndOfDocumentAndModifySelection:;
 }
 ```
 然后注销重新登录，就可以了。
