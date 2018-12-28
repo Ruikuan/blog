@@ -53,7 +53,7 @@
  
 默认的系统映射文件在这里：`System ▸ Library ▸ Frameworks ▸ AppKit.framework ▸ Resources ▸ StandardKeyBinding.dict`
 
-> [Key bindings for switchers](https://macromates.com/blog/2005/key-bindings-for-switchers/)
+> [Key bindings for switchers](https://macromates.com/blog/2005/key-bindings-for-switchers/) . 
 > [NSStandardKeyBindingResponding](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding)
 
 ```swift
