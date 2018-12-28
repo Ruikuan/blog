@@ -14,8 +14,34 @@
 {
     "\UF729" = moveToBeginningOfLine:; // home
     "\UF72B" = moveToEndOfLine:; // end
-    "$UF729" = moveToBeginningOfLineAndModifySelection:; // shift-home
+    "$\UF729" = moveToBeginningOfLineAndModifySelection:; // shift-home
     "$\UF72B" = moveToEndOfLineAndModifySelection:; // shift-end
 }
 ```
 然后注销重新登录，就可以了。
+
+### 附录
+|---Character code---|---Description---|
+|\UF700	|Arrow up|
+|\UF701	|Arrow down|
+|\UF702	|Arrow left|
+|\UF703	|Arrow right|
+|\UF728	|Forward delete|
+|\U007F	|Backward delete|
+|\UF729	|Home|
+|\UF72B	|End|
+|\UF72C	|Page up|
+|\UF72D	|Page down|
+|\U001B |	Escape|
+|\U0009	|Tab|
+|\U0019	|Backtab (shift tab)|
+|\U000D	|Return|
+|\U0003	|Enter|
+
+|---Modifier Key Code ---|---Description---|
+|$|Shift|
+|@|Command|
+|^|Control|
+|~|Option|
+ 
+默认的系统映射文件在这里：`System ▸ Library ▸ Frameworks ▸ AppKit.framework ▸ Resources ▸ StandardKeyBinding.dict`
