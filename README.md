@@ -42,6 +42,7 @@
     * [非常快的 Kestrel 的 CorrelationId 生成方法（外链）](https://github.com/aspnet/KestrelHttpServer/blob/master/src/Kestrel.Core/Internal/Infrastructure/CorrelationIdGenerator.cs#L21)
     * [小程序的兼容性坑：iOS vs 安卓、真机调试 vs 真机运行](https://github.com/Ruikuan/blog/blob/master/Coding/miniprogram_pitfall.md)
     * [SQL Server CTE 无限递归的解决方法](https://github.com/Ruikuan/blog/blob/master/Coding/cte_loop.md)
+    * [在 Mac 系统下使用 Windows 习惯的快捷键](https://github.com/Ruikuan/blog/blob/master/Coding/mac_shortcut_for_windows_user.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
