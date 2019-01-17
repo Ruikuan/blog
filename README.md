@@ -43,6 +43,7 @@
     * [小程序的兼容性坑：iOS vs 安卓、真机调试 vs 真机运行](https://github.com/Ruikuan/blog/blob/master/Coding/miniprogram_pitfall.md)
     * [SQL Server CTE 无限递归的解决方法](https://github.com/Ruikuan/blog/blob/master/Coding/cte_loop.md)
     * [在 Mac 系统下使用 Windows 习惯的快捷键](https://github.com/Ruikuan/blog/blob/master/Coding/mac_shortcut_for_windows_user.md)
+    * [iOS 下通过 Vision API 识别到的物体边框坐标转化到屏幕显示](https://github.com/Ruikuan/blog/blob/master/Coding/ios_vision_result_box_to_view.md)
 * Info
     * [VSTools.exe 下载地址](https://github.com/Ruikuan/blog/blob/master/Info/vstools_download_url.md)
     * [我关注的 Repositories](https://github.com/Ruikuan/blog/blob/master/Info/repositories_I_focus.md)
