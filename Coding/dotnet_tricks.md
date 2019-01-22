@@ -37,6 +37,9 @@ public static void Test1(char[] array)
   array[4] = '3';
 }
 ```
+虽然上面的代码避免了过多的 bound check，但出于局部性（cpu 缓存友好）的考虑，最好让访问连续，使用全倒序的下标访问，即 5 4 3 2 1 0。  
+[asp.net core 代码库的这里](https://github.com/aspnet/AspNetCore/pull/6784/commits/ec63f464eabca7011f1d1c6cf871646d74f1be43) 有个示例。
+
 也可以先进行一下数组长度判断，可以避免 bound check，但需要注意将 `array.Length` 转换为 `uint` 才行。
 
 ```cs
@@ -54,10 +57,6 @@ public static void Test1(char[] array)
   }
 }
 ```
-
-[asp.net core 代码库的这里](https://github.com/aspnet/AspNetCore/pull/6784/commits/ec63f464eabca7011f1d1c6cf871646d74f1be43) 有个示例。
-
-
 
 ### 分配一个临时数组
 
