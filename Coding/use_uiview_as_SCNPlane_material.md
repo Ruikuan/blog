@@ -86,7 +86,7 @@ func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: AR
 }
 ```
 
-这样就可以顺利得到了我们预想中的效果。不过经过这样转一道之后，原来默认的白色的 view 的背景色被丢掉了，变成了透明背景。这个应该是因为背景 layer 没有加入渲染到 image 造成的。
+这样就可以顺利得到了我们预想中的效果。
 
 由于渲染线程跟主线程并不是同一个，而且 SceneKit 并不要求要在主线程里面操作里面的 Node，我们可以把主线程的工作减少，把 SceneKit 的操作挪到其他线程去。
 
