@@ -11,7 +11,6 @@
 :local ednshost "{example.f3322.net}"
 :local ednsinterface "{pppoe-out1}"
 :local members "http://members.3322.org/dyndns/update?system=dyndns"
-:local status
 :local status [/interface get [/interface find name=$ednsinterface] running]
 :if ($status!=false) do={
 :local ednslastip [:resolve $ednshost]
@@ -19,11 +18,9 @@
 :local ednsiph [ /ip address get [/ip address find interface=$ednsinterface ] address ]
 :local ednsip [:pick $ednsiph 0 [:find $ednsiph "/"]]
 :local ednsstr "&hostname=$ednshost&myip=$ednsip"
-:if ($ednslastip != $ednsip) do={/tool fetch url=($members . $ednsstr) mode=http user=$ednsuser password=$ednspass dst-path=$ednshost
-:delay 2
-:local result [/file get $ednshost contents]
-:log info ($ednshost . " " .$result)
-/file remove $ednshost ;
+:if ($ednslastip != $ednsip) do={
+:local result [/tool fetch url=($members . $ednsstr) mode=http user=$ednsuser password=$ednspass as-value output=user]
+:log info ($ednshost . " " .$result->"data")
 }
 }
 ```
