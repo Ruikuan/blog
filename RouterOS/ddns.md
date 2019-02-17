@@ -13,15 +13,15 @@
 :local members "http://members.3322.org/dyndns/update?system=dyndns"
 :local status [/interface get [/interface find name=$ednsinterface] running]
 :if ($status!=false) do={
-:local ednslastip [:resolve $ednshost]
-:if ([ :typeof $ednslastip ] = nil ) do={ :local ednslastip "0" }
-:local ednsiph [ /ip address get [/ip address find interface=$ednsinterface ] address ]
-:local ednsip [:pick $ednsiph 0 [:find $ednsiph "/"]]
-:local ednsstr "&hostname=$ednshost&myip=$ednsip"
-:if ($ednslastip != $ednsip) do={
-:local result [/tool fetch url=($members . $ednsstr) mode=http user=$ednsuser password=$ednspass as-value output=user]
-:log info ($ednshost . " " .$result->"data")
-}
+    :local ednslastip [:resolve $ednshost]
+    :if ([ :typeof $ednslastip ] = nil ) do={ :local ednslastip "0" }
+    :local ednsiph [ /ip address get [/ip address find interface=$ednsinterface ] address ]
+    :local ednsip [:pick $ednsiph 0 [:find $ednsiph "/"]]
+    :local ednsstr "&hostname=$ednshost&myip=$ednsip"
+    :if ($ednslastip != $ednsip) do={
+        :local result [/tool fetch url=($members . $ednsstr) mode=http user=$ednsuser password=$ednspass as-value output=user]
+        :log info ($ednshost . " " .$result->"data")
+    }
 }
 ```
 主要的逻辑就是检查 pppoe-out1 的 ip 跟当前域名 example.f3322.net 解析出的ip是不是一致，不一致的话，就用 api 更新域名的 ip。  
