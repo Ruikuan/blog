@@ -48,6 +48,7 @@
     * [如何使用 UIView 作为 SCNPlane 的 material 显示](./Coding/use_uiview_as_SCNPlane_material.md)
     * [在 C# 中实现只有泛型约束不同的方法重载](./Coding/csharp_constraint_overload.md)
     * [避免 form 多次提交](./Coding/prevent_form_double_submitting.md)
+    * [使用 Process 启动 python 进程并顺利读取标准输出流](./Coding/read_python_stdout_unbuffered.md)
 * Info
     * [VSTools.exe 下载地址](./Info/vstools_download_url.md)
     * [我关注的 Repositories](./Info/repositories_I_focus.md)
