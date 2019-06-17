@@ -2,7 +2,7 @@
 
 原文 [Some performance tricks with .NET strings](https://www.meziantou.net/some-performance-tricks-with-dotnet-strings.htm)
 
-作者给 AspNetCore 提交了 Pull Request，针对相关字符串 Id 生成做了优化，优化后的代码比原来性能快一倍多。
+作者给 AspNetCore 提交了 [Pull Request](https://github.com/aspnet/AspNetCore/pull/6784)，针对相关字符串 Id 生成做了优化，优化后的代码比原来性能快一倍多。
 
 ## 原始代码
 
@@ -176,3 +176,5 @@ public static string GenerateId(long id)
 我使用 [BenchmarkDotNet](https://www.meziantou.net/comparing-implementations-with-benchmarkdotnet.htm?utm_medium=social&utm_source=web) 创建了一个基准测试来测量这个 pull requst 的每次改动会造成怎样的性能变化。你可以在这里找到代码：[The code on Gist](https://gist.github.com/meziantou/7ab15c70f7e9fc0b55dec4b074fb3209#file-code-cs)
 
 [测量结果](https://gist.github.com/meziantou/7ab15c70f7e9fc0b55dec4b074fb3209#file-results-md)
+
+最终代码比最开始的代码快一倍，而且不再有 unsafe 代码。感谢 pull request 的所有 reviewer 帮助我发现新的 C# features！
