@@ -50,6 +50,7 @@
     * [避免 form 多次提交](./Coding/prevent_form_double_submitting.md)
     * [使用 Process 启动 python 进程并顺利读取标准输出流](./Coding/read_python_stdout_unbuffered.md)
     * [字符串性能小技巧](./Coding/string_performance_tricks.md)
+    * [使用 native js 改变 React App 中 input 的值](./Coding/js_change_value_in_react_app.md)
 * Info
     * [VSTools.exe 下载地址](./Info/vstools_download_url.md)
     * [我关注的 Repositories](./Info/repositories_I_focus.md)
