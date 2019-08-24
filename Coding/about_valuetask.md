@@ -44,4 +44,6 @@ private async Task<int> LoadCache()
 
 ### 2019-8-24 更新
 
-由于 `ValueTask` 的异步操作委托给它自己对应的单独的一个 `Task` 只是一个实现细节，很可能在后续的实现中更改。目前 BCL 中正在尝试使用 `IValueTaskSource<TResult>` 来重新实现 `ValueTask` 的行为，池化它涉及异步操作的部分，以减少 alloc，可预计很快就会实现。[目前的修改和性能基准测试取得了很好的效果](https://github.com/dotnet/coreclr/pull/26310)。所以后面在 `ValueTask` 和 `Task` 的选择中，除非是为了使用并发的 `Task Parallel Library` 的功能，只是涉及异步的话，一律使用 `ValueTask`，这样可以乘上 BCL 和 CLR 的改进东风，什么都不用做就能获得大量的性能提升和更少的内存分配。不过需要注意的是，对所有的 `ValueTask`，只能 `await` 一次。因为池化后，`await` 过后，后面的资源就认为可以被其他任务复用了。再次 `await` 将会造成混乱，从而出异常。
+由于 `ValueTask` 的异步操作委托给它自己对应的单独的一个 `Task` 只是一个实现细节，很可能在后续的实现中更改。目前 BCL 中正在尝试使用 `IValueTaskSource<TResult>` 来重新实现 `ValueTask` 的行为，池化它涉及异步操作的部分，以减少 alloc，可预计很快就会实现。[目前的修改和性能基准测试取得了很好的效果](https://github.com/dotnet/coreclr/pull/26310)。所以后面在 `ValueTask` 和 `Task` 的选择中，除非是为了使用并发的 `Task Parallel Library` 的功能，只是涉及异步的话，一律使用 `ValueTask`，这样可以乘上 BCL 和 CLR 改进的东风，什么都不用做就能获得大量的性能提升和更少的内存分配。不过需要注意的是，对所有的 `ValueTask`，只能 `await` 一次。因为池化后，`await` 过后，后面的资源就认为可以被其他任务复用了。再次 `await` 将会造成混乱，从而出异常。
+
+另外，`Task` 还有一些性能上比 `ValueTask` 更优胜的地方，譬如同步完成的 `async` 方法，runtime 会使用 cached 的 `Task.CompletedTask`，并不会造成分配，对于同步的 `Task<bool>` 也是如此，会分别 cache `Task<true>` 和 `Task<false>`，对于很小的 `int`，也会做这样的处理。而且在 `Task` 上 `await` 会比 `ValueTask` 上 `await` 稍微快上那么一点点。所以 BCL 中，新的异步 API 还是有些会采用 `Task` 版本，这需要周详的考虑。更加大量的是改成了 `ValueTask` 版本。
