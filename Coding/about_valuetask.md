@@ -41,3 +41,7 @@ ValueTask 不如 Task 那么直接。
 
 
 所以 ValueTask 也不是万能药，需要综合多种因素（同步异步操作的比例，操作耗时等）来进行取舍，通常需要进行测试来验证是否值得将 Task 替换为 ValueTask。
+
+### 2019-8-24 更新
+
+由于 `ValueTask` 的异步操作委托给它自己对应的单独的一个 `Task` 只是一个实现细节，很可能在后续的实现中更改。目前 BCL 中正在尝试使用 `IValueTaskSource<TResult>` 来重新实现 `ValueTask` 的行为，池化它涉及异步操作的部分，以减少 alloc，可预计很快就会实现。[目前的修改和性能基准测试取得了很好的效果](https://github.com/dotnet/coreclr/pull/26310)。所以后面在 `ValueTask` 和 `Task` 的选择中，除非是为了使用并发的 `Task Parallel Library` 的功能，只是涉及异步的话，一律使用 `ValueTask`，这样可以乘上 BCL 和 CLR 的改进东风，什么都不用做就能获得大量的性能提升和更少的内存分配。不过需要注意的是，对所有的 `ValueTask`，只能 `await` 一次。因为池化后，`await` 过后，后面的资源就认为可以被其他任务复用了。再次 `await` 将会造成混乱，从而出异常。
