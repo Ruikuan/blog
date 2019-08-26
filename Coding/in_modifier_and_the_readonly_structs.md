@@ -211,3 +211,5 @@ public int AggregatePassedByIn()
 ## 更新
 
 C# 8.0 中引入了更加细致的 [Readonly Member](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8#readonly-members) 修饰符，可以更加细粒度地控制被修饰的方法和属性不会导致 `struct` 状态的改变，譬如可以将它用在一般不会导致状态改变的 `ToString()` 上等等。这个特性的引入，可以很大程度上减轻我们一开始说的由于防御性复制对 `readonly` 的 `struct` 性能的影响。编译器会保证声明为 `readonly` 的 member 的只读性，从而在调用这些 member 时，不再需要防御性复制。
+
+另外，最新的编译器已经支持对隐式的防御性复制（调用方法等导致）生成警告信息提示。
