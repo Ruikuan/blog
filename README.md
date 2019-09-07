@@ -53,6 +53,7 @@
     * [使用 native js 改变 React App 中 input 的值](./Coding/js_change_value_in_react_app.md)
     * [一个快速反射读取私有字段小窍门（花招）](./Coding/fast_reflection_adapter.md)
     * [设置网页打印样式](./Coding/print_html.md)
+    * [直接编辑 html 内容](./Coding/edit_html_content.md)
 * Info
     * [VSTools.exe 下载地址](./Info/vstools_download_url.md)
     * [我关注的 Repositories](./Info/repositories_I_focus.md)
