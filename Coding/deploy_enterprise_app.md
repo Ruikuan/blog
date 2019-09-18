@@ -1,4 +1,4 @@
-# 发布企业证书签名的 ios App
+# https 发布企业证书签名的 ios App
 
 之前的 p12 文件和 mobileprovision 文件的不详细讲了。总之就是得到这两个文件，将 p12 文件导入 KeyChain，导入时要输入密码。然后项目里面设置用它签名。然后打包，然后导出 ipa。
 
