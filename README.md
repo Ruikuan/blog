@@ -39,7 +39,7 @@
     * [通过 asp.net core 内置的代码实行反射调用/异步调用方法](./Coding/ObjectMethodExecutor.md)
     * [解决 Package Cache 越来越大的问题](./Coding/solve_package_cache.md)
     * [多边形中心计算](./Coding/polygon_gravity_center.md)
-    * [非常快的 Kestrel 的 CorrelationId 生成方法[外链]](https://github.com/aspnet/AspNetCore/blob/master/src/Servers/Kestrel/Core/src/Internal/Infrastructure/CorrelationIdGenerator.cs#L21)
+    * [非常快的 Kestrel 的 CorrelationId 生成方法[外链]](https://github.com/aspnet/AspNetCore/blob/e46d376731605d8e64d00fb9be6bde5485a80005/src/Servers/Kestrel/shared/CorrelationIdGenerator.cs#L21)
     * [小程序的兼容性坑：iOS vs 安卓、真机调试 vs 真机运行](./Coding/miniprogram_pitfall.md)
     * [SQL Server CTE 无限递归的解决方法](./Coding/cte_loop.md)
     * [在 Mac 系统下使用 Windows 习惯的快捷键](./Coding/mac_shortcut_for_windows_user.md)
