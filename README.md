@@ -74,6 +74,7 @@
     * [RouterOS 使用 3322 动态域名](./RouterOS/ddns.md)
     * [RouterOS 中的 NAT](./RouterOS/routeros_nat.md)
     * [一个网络抽风问题以及一个网络闪断问题](./RouterOS/network_issues.md)
+    * [在 RouterOS 上设置 L2TP VPN](./RouterOS/l2tp_vpn.md)
 * Blogging about Midori
     * [关于 Midori 的博客](./Coding/blogging_about_midori.md)
 * 生活
