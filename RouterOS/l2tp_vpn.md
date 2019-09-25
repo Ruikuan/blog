@@ -9,3 +9,7 @@
 ![image](https://user-images.githubusercontent.com/7594271/65597836-95240900-dfcc-11e9-92b7-b95365503340.png)
 
 ![image](https://user-images.githubusercontent.com/7594271/65598053-27c4a800-dfcd-11e9-8250-0b06231c8e98.png)
+
+防火墙开放 UDP 1701 L2TP
+防火墙开放 UDP 500 IKE
+防火墙开放 UDP 4500 IKE NAT Transversal
