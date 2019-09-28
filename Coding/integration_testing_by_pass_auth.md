@@ -229,7 +229,7 @@ public class UnitTest1 : IClassFixture<TestWebApplicationFactory<AuthWebApp.Star
 ## 一些注意的地方
 
 1. 在 3.0 项目中，我们的中间件要在 `app.UseAuthorization()` 前面，在 2.2 项目中，我们的中间件只要在 `app.UseMvc()` 前面就行了。
-2. 在 2.2 项目中，如果我们的项目文件（测试项目跟被测试项目）的 `Microsoft.AspNetCore.App` 元引用包没有指定版本，有可能会导致测试失败，所有请求都返回 404 not found。很烦人，也很找到原因。最简单的解决方法就是明确加入版本号 `2.2.0`，这里有相关的陈述 https://github.com/aspnet/AspNetCore/issues/8428。
+2. 在 2.2 项目中，如果我们的项目文件（测试项目跟被测试项目）的 `Microsoft.AspNetCore.App` 元引用包没有指定版本，有可能会导致测试失败，所有请求都返回 404 not found。很烦人，也很难找到原因。最简单的解决方法就是明确加入版本号 `2.2.0`，这里有相关的陈述 https://github.com/aspnet/AspNetCore/issues/8428。
 3. 测试和被测试项目的 SDK 要设置为 `Microsoft.NET.Sdk.Web` 而不能是 `Microsoft.NET.Sdk`。
 
 综合 2 和 3，就是 
