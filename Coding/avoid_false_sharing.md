@@ -85,7 +85,13 @@ class Program
 
 那么，应该如何应对这种情况呢？
 
-处理方法不难，由于 CPU 读取是按照 cache line 读取的，只要不相关的元素不处于同一个 cache line 上就行了。落实到这个数组上，就是将元素的间隔拉开到 64 字节以上，中间填充 0。修改 `Counters` 代码如下：
+处理方法不难，由于 CPU 读取是按照 cache line 读取的，只要不相关的元素不处于同一个 cache line 上就行了。落实到这个数组上，就是将元素的间隔拉开到 64 字节以上，中间填充 0。
+
+对于数组，还有一个需要额外注意的点：数组的内存布局中，第一个元素紧跟在 `length` 存储位置的后面，因此所有对数组元素的访问都会因为使用到 `length` 来进行 bound check，从而跟第一个元素有了 false sharing。因此第一个元素跟 `length` 位置也要拉开间隔。
+
+![数组内存布局](../Content/array_layout.jpg)
+
+修改 `Counters` 代码如下：
 
 ```cs
 class Counters
