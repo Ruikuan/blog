@@ -58,6 +58,7 @@
     * [网页支持 dark 模式](./Coding/dark_theme.md)
     * [asp.net core 集成测试如何自动通过身份验证挑战](./Coding/integration_testing_by_pass_auth.md)
     * [一些关于 ipc 的性能数据](./Coding/some_ipc_performance_data.md)
+    * [在并行程序中避免 false sharing](./Coding/avoid_false_sharing.md)
 * Info
     * [VSTools.exe 下载地址](./Info/vstools_download_url.md)
     * [我关注的 Repositories](./Info/repositories_I_focus.md)
