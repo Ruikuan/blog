@@ -81,6 +81,8 @@ class Program
 
 现在看回我们上面的代码，一个 long 是 8 个 byte，那么 8 个元素的 `long[8]` 数组会被一次读入到 CPU 的 cache 中，而在多线程处理时，同一个 `long[8]` 会被读到多个 CPU 自己的 cache 里面（L1，不考虑不共享的话，还有 L2、L3 等）。那么某个 CPU 改变了其中的一个元素的值时，整个 cache line 的数据都被污染了，由于多个 CPU 共享这个数组，需要将这个 cache line 的数据写回内存，然后其他 CPU 要对这个数组的其他元素进行操作，就要重新将这个数组的所有内容加载回自己的 cache 中。如此不断累加元素、写回内存、其他 cpu cache 失效，读取内存的循环。相当于所有 CPU 都在竞争小块内存的使用，由于大量的数据要在内存和 CPU 缓存间不断传输，比串行化更糟糕。这就是 false sharing 的危害。
 
+![False sharing occurs when threads on different processors modify variables that reside on the same cache line. This invalidates the cache line and forces a memory update to maintain cache coherency.](https://software.intel.com/sites/default/files/m/d/4/1/d/8/5-4-figure-1.gif)
+
 那么，应该如何应对这种情况呢？
 
 处理方法不难，由于 CPU 读取是按照 cache line 读取的，只要不相关的元素不处于同一个 cache line 上就行了。落实到这个数组上，就是将元素的间隔拉开到 64 字节以上，中间填充 0。修改 `Counters` 代码如下：
@@ -143,4 +145,6 @@ struct Counters
 }
 ```
 
-> 参考：[False sharing is no fun](http://joeduffyblog.com/2009/10/19/false-sharing-is-no-fun/)
+参考： 
+> [False sharing is no fun](http://joeduffyblog.com/2009/10/19/false-sharing-is-no-fun/)  
+> [Avoiding and Identifying False Sharing Among Threads](https://software.intel.com/en-us/articles/avoiding-and-identifying-false-sharing-among-threads)
