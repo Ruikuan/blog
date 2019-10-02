@@ -145,6 +145,9 @@ struct Counters
 }
 ```
 
+可以通过  Intel® VTune™ Performance Analyzer 或者 Intel® Performance Tuning Utility、Visual Studio Profiler 以及 性能计数器 的表现来发现潜在的 false sharing。
+
 参考： 
 > [False sharing is no fun](http://joeduffyblog.com/2009/10/19/false-sharing-is-no-fun/)  
-> [Avoiding and Identifying False Sharing Among Threads](https://software.intel.com/en-us/articles/avoiding-and-identifying-false-sharing-among-threads)
+> [Avoiding and Identifying False Sharing Among Threads](https://software.intel.com/en-us/articles/avoiding-and-identifying-false-sharing-among-threads)  
+> [False Sharing](https://msdn.microsoft.com/magazine/cc872851.aspx)
