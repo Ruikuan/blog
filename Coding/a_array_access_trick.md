@@ -15,7 +15,7 @@ public struct ObjectWrapper
 }
 ```
 
-然后使用这个值类型来创建数组，这样在设置数组值 `ObjectWrapperArray[i] = objectWrapperInstance` 时就不会有检查了。性能会有一定的提升。
+然后使用这个值类型来创建数组，这样在设置数组值 `ObjectWrapperArray[i] = objectWrapperInstance` 时就不会有类型检查了。性能会有一定的提升。
 
 Roslyn 代码库里面的 `ObjectPool<T>` 也利用了这样的技巧：
 
