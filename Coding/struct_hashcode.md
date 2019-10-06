@@ -2,7 +2,7 @@
 
 经常有人在 `Dictionary<TKey,TValue>` 或 `HashSet<T>` 中误用没有自定义 `GetHashCode` 的 `struct` 做 key，出现性能问题。这是默认的 `ValueType` 的 `GetHashCode` 实现存在的问题造成的。
 
-`GetHashCode` 有个原则是：对于所有 `Equals` 的对象，它们的 `GetHashCode` 应该返回相等的值。但反之则没有要求，也就是并没有要求不一样的对象一定要返回不同的 `code`，这在物理上是不可能做到的，因为 `int` 的范围相当有限。
+`GetHashCode` 有个原则是：对于所有 `Equals` 的对象，它们的 `GetHashCode` 应该返回相等的值。但反之则没有要求，也就是并没有要求不一样的对象一定要返回不同的 `hashcode`，这在物理上是不可能做到的，因为 `int` 的范围相当有限。
 
 CLR 中对于 `struct` 的 `GetHashCode` 的默认实现为，先检查 `struct` 的所有字段，分两种情况处理：
 
