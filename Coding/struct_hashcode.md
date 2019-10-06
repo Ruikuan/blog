@@ -6,7 +6,7 @@
 
 CLR 中对于 `struct` 的 `GetHashCode` 的默认实现为，先检查 `struct` 的所有字段，分两种情况处理：
 
-* 对于所有字段都是值类型，而且中间没有间隙的（由于 `struct` 的对齐布局，字段中间可能产生间隙，像 `{bool,int}` 这样的结构就会在 `bool` 和 `int` 之间产生 3 个字节的间隙），则 CLR 会对其中所有的值的每 32 位做 `XOR`，从而生成 `hashcode`。这种生成的方式会利用到所有的字段内容，因为属于比较“好”的 `hashcode`。不过这里也存在一个鲜为人知的 bug：如果 `struct` 包含 ` System.Decimal`，由于 `System.Decimal` 的字节并不代表它的值，所以对于相同值的 `decimal`，可能生成的 `hashcode` 并不一样。*只是 `struct` 包含 'decimal' 的情况，而不是 `decimal` 自身的情况*。
+* 对于所有字段都是值类型，而且中间没有间隙的（由于 `struct` 的对齐布局，字段中间可能产生间隙，像 `{bool,int}` 这样的结构就会在 `bool` 和 `int` 之间产生 3 个字节的间隙），则 CLR 会对其中所有的值的每 32 位做 `XOR`，从而生成 `hashcode`。这种生成的方式会利用到所有的字段内容，因为属于比较“好”的 `hashcode`。不过这里也存在一个鲜为人知的 bug：如果 `struct` 包含 ` System.Decimal`，由于 `System.Decimal` 的字节并不代表它的值，所以对于相同值的 `decimal`，可能生成的 `hashcode` 并不一样。*只是 `struct` 包含 `decimal` 的情况，而不是 `decimal` 自身的情况*。
 
 ```cs
 struct Test { public decimal value; }
