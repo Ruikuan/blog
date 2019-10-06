@@ -31,7 +31,7 @@ struct Test
 
 ## 结论
 
-由于 `struct` 的 layout 经常不可控（调换下字段的顺序就可能造成影响），以及情况 2 的存在，使用默认的 `GetHashCode` 实现是很不明智的。对于自定义的 `struct`，绝不要使用默认实现，应该自定义靠谱的 `GetHashCode`。
+由于 `struct` 的 layout 经常不可控（调换下字段的顺序就可能造成影响），以及情况 2 的存在，使用默认的 `GetHashCode` 实现是很不明智的。对于自定义的 `struct`，绝不要使用默认实现，应该自定义靠谱的 `GetHashCode`。可以参考 `ValueTuple<T1, T2>` 的实现，使用 `HashCode.Combine<T1, T2, T...>(value1, value2, ...)` 来生成自定义的 `hashcode`。
 
 ## 番外
 
