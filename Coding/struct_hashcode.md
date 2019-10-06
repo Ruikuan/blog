@@ -15,7 +15,7 @@ static void Main() {
     var t1 = new Test() { value = 1.0m };
     var t2 = new Test() { value = 1.00m };
     if (t1.GetHashCode() != t2.GetHashCode())
-        Console.WriteLine("gack!");
+        Console.WriteLine("fuck!");
 }
 ```
 
@@ -35,4 +35,4 @@ struct Test
 
 ## 番外
 
-对于 `Enum`，调用它的 `Equals` 会导致装箱（之前版本的 clr 调用 `GetHashCode` 也会，目前版本的改过来了）。为了避免这种情况，请调用 ` EqualityComparer<Enum>.Default.Equals(enum1, enum2)`。
+对于 `Enum`，调用它的 `Equals` 会导致装箱（之前版本的 clr 调用 `GetHashCode` 也会，目前版本的改过来了）。为了避免这种情况，请调用 `EqualityComparer<Enum>.Default.Equals(enum1, enum2)`。
