@@ -26,7 +26,7 @@ private static ReadOnlySpan<byte> LookupTable => new byte[] {
 };
 ```
 
-因为 PR [Refer directly to static data when ReadOnlySpan wraps arrays of bytes](https://github.com/dotnet/roslyn/pull/24621) 的优化，编译器知道 `ReadOnlySpan<byte>` 在这里相当于一个 `const` 的语义，它的内容在编译器就已经能确定，而且由于是 `ReadOnlySpan`，运行时也不会被改变。因此直接将字节数组内容编译到 `.text` 段之后，在访问 `LookupTable` 时，也不需要再用 `memcpy` 构建数组，而是直接将访问的引用指向运行映像中只读的 `.text` 中的字节内容。减少了初始化的执行指令，也减少了不必要的内存分配。
+因为 PR [Refer directly to static data when ReadOnlySpan wraps arrays of bytes](https://github.com/dotnet/roslyn/pull/24621) 的优化，编译器知道 `ReadOnlySpan<byte>` 在这里相当于一个 `const` 的语义，它的内容在编译器就已经能确定，而且由于是 `ReadOnlySpan`，运行时也不会被改变。因此将字节数组内容编译到 `.text` 段之后，在访问 `LookupTable` 时，也不需要再用 `memcpy` 构建数组，而是直接将访问的引用指向运行映像中只读的 `.text` 中的字节内容。减少了初始化的执行指令，也减少了不必要的内存分配。
 
 除了在静态字段中可以这样使用，还可以用在方法中返回：
 
