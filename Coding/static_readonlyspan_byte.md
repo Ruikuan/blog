@@ -53,3 +53,7 @@ void Write200Ok(Stream s) {
 只要字节内容是编译时能确定的，而且分配的目标对象是 `ReadOnlySpan<byte>`，都能用上这个优化。
 
 不过对于字符串来说，这样构造字节数组可读性实在太差，写代码痛苦，也容易出现错误。后续还在继续研究怎样才能优化字符串的使用体验。[Extend ReadOnlySpan<byte> optimization for static data to work with ASCII/UTF8 strings](https://github.com/dotnet/csharplang/issues/2212)。
+
+> 参考:  
+> [C# ReadOnlySpan and static data](https://vcsjones.dev/2019/02/01/csharp-readonly-span-bytes-static/)  
+> [Performance Improvements in .NET Core 3.0](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-core-3-0/)  
