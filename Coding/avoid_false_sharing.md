@@ -127,6 +127,7 @@ class Counters
 除了数组之外，我们也可以利用 `struct` 的 layout 设定能力来避免 false sharing。使用 `Explicit` 的 layout，我们可以将 `struct` 字段的内存距离拉到 64 字节以上。
 
 ```cs
+[StructLayout(LayoutKind.Explicit)]
 struct Counters
 {
     [FieldOffset(0)]
