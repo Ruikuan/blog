@@ -11,6 +11,29 @@
 * JIT 将循环中的局部 return/break 移到热路径外，让循环体更加紧凑连续，不再需要使用 goto 等 trick 来优化，从而改善了代码的 layout，还改善了代码编写的 shape，并且性能将近 ~2x。
 * 某些情况下将 [TEST 和 LSH 指令改为生成 BT 指令](https://github.com/dotnet/coreclr/pull/13626)，~1.4x。
 * 识别类似 `((IAnimal)thing).MakeSound()` 这样通过接口来调用 struct 方法的代码（其中 thing 为 struct），避免装箱和接口方法调用，直接调用成员方法，并且尽可能 inline。~10x 的性能提升，并且不会 allocated。
+
+```cs
+// 在 .net core 2.1 后不会 box
+[Benchmark]
+public void BoxingAllocations() => BoxingAllocations(default(Dog));
+
+private void BoxingAllocations<T>(T thing)
+{
+    if (thing is IAnimal)
+        ((IAnimal)thing).MakeSound();
+}
+
+private struct Dog : IAnimal
+{
+    public void Bark() { }
+    void IAnimal.MakeSound() => Bark();
+}
+
+private interface IAnimal
+{
+    void MakeSound();
+}
+```
 * 所有的优化组合起来使用，对上层代码有显著的性能提升。
 
 ## Threading
