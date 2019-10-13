@@ -1,6 +1,6 @@
 # .Net Core 3.0 性能改进
 
-太多了，只挑一部分感兴趣的吧
+太多了，只挑一部分感兴趣的吧。原为：https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-core-3-0/
 
 ## Span 和它的小伙伴
 
