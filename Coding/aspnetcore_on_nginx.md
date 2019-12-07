@@ -415,49 +415,19 @@ sudo nginx -t && sudo nginx -s reload
 
 ## 定期自动更新 let's encrypt 的证书
 
-let's encrypt 的证书 90天 过期，因此要每隔一段时间更新一下。我们可以使用 linux 的 `cron job` 来自动完成这件事。
+可以参考 https://certbot.eff.org/lets-encrypt/debianstretch-nginx 来配置证书更新。
 
-创建一个自动执行任务帐号有权限访问并执行的文件：
-
-```sh
-vim ~/renew-letsencrypt.sh
-```
-
-文件内容：
-```sh
-#!/bin/sh
-
-mkdir -p /var/log/letsencrypt;
-cd /opt/letsencrypt/;
-./certbot-auto --non-interactive --keep-until-expiring --agree-tos --qui
-et --config /etc/letsencrypt/configs/mydomain.com.conf certonly;
-
-if [ $? -ne 0 ]
- then
-        ERRORLOG=`tail /var/log/letsencrypt/letsencrypt.log`
-        echo -e "The Let's Encrypt cert has not been renewed! \n \n" \
-                 $ERRORLOG
- else
-        nginx -s reload
-fi
-
-exit 0;
-```
-
-给它执行权限（不确定是不是需要）:
-
-```sh
-chmod +x ~/renew-letsencrypt.sh
-```
-
-最后，打开 `crontab` 来添加 `cron job`：
+安装 Certbot
 
 ```
-crontab -e -u yourUserName
-# In crontab
-0 0 1 JAN,MAR,MAY,JUL,SEP,NOV * ~/renew-letsencrypt.sh
+sudo apt-get install certbot python-certbot-nginx
 ```
 
-保存即可。
+获取证书并设定自动更新
+
+```
+sudo certbot --nginx
+```
+
 
 至此，所有的工作都已经完成。
