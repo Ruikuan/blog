@@ -71,6 +71,7 @@
     * [解决使用 Win10 共享移动热点无法连接互联网的问题](./Info/win10_hotspot_no_internet.md)
     * [使用 RemoteApp 来使用 QQ 旺旺之类鬼鬼祟祟的软件](./Info/remoteapp_bad_stuff.md)
     * [新安装 Windows 如何保持 C 盘精简？](./Info/windows_folder_redirect.md)
+    * [压缩 vhdx 文件](./Info/compact_vhdx.md)
 * Digihome
     * [MikroTik RouterOS 将 http 请求重定向到 https](./RouterOS/http_redirect_to_https.md)
     * [将 RouterOS 用作 DNS 服务器](./RouterOS/custom_dns.md)
@@ -84,7 +85,5 @@
 * Blogging about Midori
     * [关于 Midori 的博客](./Coding/blogging_about_midori.md)
 * 生活
-    * [回想我高考前的一年](./times/2017.md)
-    * [2017 目标](./times/2017_next.md)
     * [关于智慧、知识以及能力的一些随想](./times/about1.md)
     * [累积、突变和演进](./times/accumulate_mutation_evolution.md)
