@@ -87,4 +87,4 @@
 * 生活
     * [关于智慧、知识以及能力的一些随想](./times/about1.md)
     * [累积、突变和演进](./times/accumulate_mutation_evolution.md)
-    * [你应该知道](./times/you_shold_know.md)
+    * [你应该知道](./times/you_should_know.md)
