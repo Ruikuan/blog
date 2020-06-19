@@ -3,7 +3,7 @@
 假如要创建针对域名 api.mydomain.com 的 https 证书，可以 PS 中执行如下命令即可：
 
 ```powershell
-New-SelfSignedCertificate -DnsName "api.mydomain.com" -CertStoreLocation "cert:\LocalMachine\My"
+New-SelfSignedCertificate -DnsName "api.mydomain.com" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(1)
 ```
 创建的证书被存储在[证书(本地计算机)-个人]中，可以根据需要导出到其他电脑导入受信任的根证书区域，避免访问这个证书的网站不受信任。若使用 iis，则这个证书在绑定 https 协议时已经可以提供选择了。证书有效期一年。
 
