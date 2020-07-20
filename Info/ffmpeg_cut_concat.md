@@ -22,6 +22,14 @@ ffmpeg -f concat -i list.txt -c copy output.mp4
 ```
 轻松搞定。
 
+## 改变分辨率
+
+譬如将 1080p 的视频大小变为它的一半
+
+```
+ffmpeg -i video_1920.mp4 -vf scale=960:540 video_540.mp4 -hide_banner
+```
+
 ## 处理音频
 
 ### 将 MP4 中的音频转录到 MP3
