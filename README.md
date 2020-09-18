@@ -61,6 +61,7 @@
     * [在并行程序中避免 false sharing](./Coding/avoid_false_sharing.md)
     * [ReadOnlySpan 访问静态数据优化](./Coding/static_readonlyspan_byte.md)
     * [.Net Core 3.0 性能改进](./Coding/dotnetcore3.0_perf.md)
+    * [SQL Server 的 ltrim 和 rtrim 函数并不会清除 tab 空格](./Coding/sqlserver_trim_no_tab.md)
 * Info
     * [VSTools.exe 下载地址](./Info/vstools_download_url.md)
     * [我关注的 Repositories](./Info/repositories_I_focus.md)
