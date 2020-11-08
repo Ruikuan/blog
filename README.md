@@ -84,6 +84,7 @@
     * [一个网络抽风问题以及一个网络闪断问题](./RouterOS/network_issues.md)
     * [在 RouterOS 上设置 L2TP VPN](./RouterOS/l2tp_vpn.md)
     * [VPN 客户端使用家里的透明代理](./RouterOS/vpnclient_to_tproxy.md)
+    * [修改透明代理的路由方式](./RouterOS/tproxy_routing.md)
 * Blogging about Midori
     * [关于 Midori 的博客](./Coding/blogging_about_midori.md)
 * 生活
