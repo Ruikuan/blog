@@ -94,3 +94,5 @@ apple.com
 aaplimg.com
 mzstatic.com
 ```
+
+另外，苹果的推送服务最好也不路由到透明代理，除非代理出去的线路非常稳定（我的就经常不稳定 ：- ()，否则推送没办法及时收到就不是太好了。关于推送服务器的IP，参见 [如果您的 Apple 设备无法收到 Apple 推送通知](https://support.apple.com/zh-cn/HT203609)
