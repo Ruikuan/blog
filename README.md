@@ -75,6 +75,7 @@
     * [使用 RemoteApp 来使用 QQ 旺旺之类鬼鬼祟祟的软件](./Info/remoteapp_bad_stuff.md)
     * [新安装 Windows 如何保持 C 盘精简？](./Info/windows_folder_redirect.md)
     * [压缩 vhdx 文件](./Info/compact_vhdx.md)
+    * [ffmpeg 修复视频文件](./Info/ffmpeg_repair.md)
 * Digihome
     * [MikroTik RouterOS 将 http 请求重定向到 https](./RouterOS/http_redirect_to_https.md)
     * [将 RouterOS 用作 DNS 服务器](./RouterOS/custom_dns.md)
