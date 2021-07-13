@@ -7,8 +7,8 @@
       "vertical_offset": 0,
       "segments": [
         {
-          "background": "#feae34",
-          "foreground": "#262b44",
+          "foreground": "#003544",
+          "background": "#0087D8",
           "powerline_symbol": "",
           "leading_diamond": "",
           "trailing_diamond": "",
@@ -28,7 +28,7 @@
             "display_stash_count": true,
             "display_upstream_icon": true,
             "status_colors_enabled": true,
-            "local_changes_color": "#f77622",
+            "local_changes_color": "#d2ff5e",
             "ahead_and_behind_color": "#e43b44",
             "behind_color": "#f77622",
             "ahead_color": "#2ce8f5",
