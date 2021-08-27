@@ -24,3 +24,9 @@ ffmpeg -i source_file -movflags faststart -codec copy output.mp4
 ```
 
 `-movflags faststart` 参数告诉 ffmpeg 重组 MP4 文件 `atoms`，将 `moov` 放到文件开头。
+
+### 将其他编码的视频转化为标准的 mp4 (H264 AAC)
+
+```
+ffmpeg -i input.flv -vcodec libx264 -acodec aac output.mp4
+```
