@@ -64,6 +64,7 @@
     * [SQL Server 的 ltrim 和 rtrim 函数并不会清除 tab 空格](./Coding/sqlserver_trim_no_tab.md)
     * [升级 .net 5.0 之后的 Integration Testing 小问题](./Coding/integrationtest_getcha.md)
     * [Go 反序列化 utf8-bom 的 json 文件出错](./Coding/go_json_utf8_bom.md)
+    * [使用 Perfview 收集 events 时如何带上 callstack？](./Coding/perfview_collect_event_with_callstack.md)
 * Info
     * [VSTools.exe 下载地址](./Info/vstools_download_url.md)
     * [我关注的 Repositories](./Info/repositories_I_focus.md)
