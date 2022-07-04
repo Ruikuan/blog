@@ -9,7 +9,7 @@ New-SelfSignedCertificate -DnsName "api.mydomain.com" -CertStoreLocation "cert:\
 
 上面命令中的 api.mydomain.com 可以更改为 *.mydomain.com 来实现通配符证书。
 
-其他的需求如需要更改证书有效期、直接将证书创建到根证书区域等，可以参阅 [New-SelfSignedCertificate 文档](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps)  
+其他的需求如需要更改证书有效期、直接将证书创建到根证书区域等，可以参阅 [New-SelfSignedCertificate 文档](https://docs.microsoft.com/en-us/powershell/module/pki/new-selfsignedcertificate)  
 
 
 > [How to create a self-signed certificate for a domain name for development?](https://stackoverflow.com/a/27257921)
